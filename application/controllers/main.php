@@ -19,6 +19,8 @@ class main extends CI_Controller {
 	 */
     public function __construct(){
 		parent::__construct();
+        $this->load->model('barang_model');
+		$this->load->helper('url');
 	}
     
 	public function index()
@@ -26,7 +28,38 @@ class main extends CI_Controller {
 		$this->load->view('Main/header');
 		$this->load->view('Main/home');
 		$this->load->view('Main/footer');
+        
+        $data['barang'] = $this->barang_model->tampil_data()->result();
+		$this->load->view('barang_form_view',$data);
 	}
+    
+    function tambah(){
+		$this->load->view('barang_form_input');
+	}
+    function tambah_aksi(){
+		$idBarang = $this->input->post('idBarang');
+        $fotoBarang = $this->input->post('fotoBarang');
+		$namaBarang = $this->input->post('namaBarang');
+		$kategoriBarang = $this->input->post('kategoriBarang');
+        $hargaBarang = $this->input->post('hargaBarang');
+        $stokBarang = $this->input->post('stokBarang');
+ 
+		$data = array(
+			'idBarang' => $idBarang,
+            'fotoBarang' => $fotoBarang,
+			'namaBarang' => $namaBarang,
+            'kategoriBarang' => $kategoriBarang,
+            'hargaBarang' => $hargaBarang,
+			'stokBarang' => $stokBarang
+			);
+		$this->barang_model->input_data('barang',$data);
+		redirect('http://localhost/TolahToleh/main/index');
+	}
+    function hapus($idBarang){
+        $where = array('idBarang' => $idBarang);
+        $this->barang_model->hapus_data('barang',$where);
+        redirect('http://localhost/TolahToleh/main/index');
+    }
 }
 
 /* End of file welcome.php */
