@@ -13,14 +13,14 @@
               	  	
                   <li class="mt">
                       <a class="active" href="index.html">
-                          <i class="fa fa-dashboard"></i>
+                          <i class="fa fa-user"></i>
                           <span>Profil</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
-                          <i class="fa fa-desktop"></i>
+                          <i class="fa fa-suitcase"></i>
                           <span>Barang</span>
                       </a>
                       <ul class="sub">
@@ -30,7 +30,7 @@
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
-                          <i class="fa fa-cogs"></i>
+                          <i class="fa fa-file-text"></i>
                           <span>Laporan</span>
                       </a>
                       <ul class="sub">
