@@ -26,6 +26,8 @@
   </head>
 
   <body>
+    <?php echo validation_errors(); ?>
+   <?php echo form_open('login_verify'); ?>
 
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
@@ -34,28 +36,16 @@
 	  <div id="login-page">
 	  	<div class="container">
 
-		      <form class="form-login" action="index.html">
+		      <form class="form-login" >
+            <!--action="<?php echo base_url('login/aksi_login'); ?>" method="post"-->
 		        <h2 class="form-login-heading">Selamat datang, Juragan Tolah Toleh</h2>
 		        <div class="login-wrap">
 		            <input type="text" class="form-control" placeholder="Email" autofocus>
 		            <br>
 		            <input type="password" class="form-control" placeholder="Password">
-		            <label class="checkbox">
-		                <!--span class="pull-right">
-		                    <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
-
-		                </span-->
-		            </label>
-		            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> LOGIN</button>
+		            <label class="checkbox"></label>
+		            <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> LOGIN</button>
 		            <hr>
-
-		            <div class="registration">
-		                Belum jadi Juragan?<br/>
-		                <a class="" href="#">
-		                    Buat akun sekarang
-		                </a>
-		            </div>
-
 		        </div>
 
 		          <!-- Modal -->
