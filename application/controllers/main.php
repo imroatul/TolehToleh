@@ -29,9 +29,14 @@ class main extends CI_Controller {
 		$this->load->view('Main/home');
 		$this->load->view('Main/footer');
         
-        $data['barang'] = $this->barang_model->tampil_data()->result();
-		$this->load->view('barang_form_view',$data);
 	}
+    function tampil_barang(){
+        $this->load->view('Main/header');
+        $this->load->view('Main/home');
+        $data['barang'] = $this->barang_model->tampil_data()->result();
+        $this->load->view('barang_form_view',$data);
+		$this->load->view('Main/footer');    
+    }
     
     function tambah(){
 		$this->load->view('barang_form_input');

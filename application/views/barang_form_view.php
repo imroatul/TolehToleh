@@ -1,47 +1,56 @@
-<table class="table table-hover">
+<a href="<?php echo'http://localhost/TolahToleh/index.php/main/tambah'; ?>" class="btn btn-info btn-md"><span class="glyphicon glyphicon-plus"></span>&nbsp;Tambah Barang</a>
+<br/>
+<br/>
+
+<?php 
+	$per_hal=10;
+	$jumlah_record=mysql_query("SELECT COUNT(*) from barang");
+	$jum=mysql_result($jumlah_record, 0);
+	$halaman=ceil($jum / $per_hal);
+	$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
+	$start = ($page - 1) * $per_hal;
+?>
+<br/>
+<form action="cari_barang.php" method="get">
+	<div class="input-group col-md-5 col-md-offset-7">
+		<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search"></span></span>
+		<input type="text" class="form-control" placeholder="Cari Barang .." aria-describedby="basic-addon1" name="cari">	
+	</div>
+</form>
+<br/>
+<table class="table table-bordered">
 	<tr>
 		<th class="col-md-0">No</th>
-        <th class="col-md-1">Kategori</th>
-		<th class="col-md-2">Nama Barang</th>
-		<th class="col-md-1">Harga Barang</th>
-		<th class="col-md-1">Deskripsi</th>
-		<th class="col-md-1">Stock</th>
-		<th class="col-md-1">Diskon</th>
-        <th class="col-md-2">Gambar</th>
-		<th class="col-md-3">Pilihan</th>
+        <th class="col-md-0">Foto</th>
+		<th class="col-md-0">Nama Barang</th>
+		<th class="col-md-0">Kategori</th>
+		<th class="col-md-0">Harga Barang</th>
+		<th class="col-md-0">Stok</th>
+		<th class="col-md-0">Pilihan</th>
 	</tr>
 	<?php 
 	if(isset($_GET['cari'])){
 		$cari=mysql_real_escape_string($_GET['cari']);
-		$brg=mysql_query("select * from tabel_barang where nama_barang like '$cari'");
+		$brg=mysql_query("select * from barang where namaBarang like '$cari'");
 	}else{
-		$brg=mysql_query("select * from tabel_barang limit $start, $per_hal");
+		$brg=mysql_query("select * from barang limit $start, $per_hal");
 	}
-	$no=1;
-	while($b=mysql_fetch_array($brg)){
-
+		$no = 1;
+		foreach($barang as $u){ 
 		?>
 		<tr>
 			<td><?php echo $no++ ?></td>
-            <td><?php echo $b['kategori'] ?></td>
-			<td><?php echo $b['nama_barang'] ?></td>
-			<td>Rp.<?php echo $b['harga_barang'] ?>,-</td>
-            <td><?php echo $b['deskripsi'] ?></td>
-			<td><?php echo $b['stock'] ?></td>
-            <td><?php echo $b['diskon'] ?></td>
-            
-            
-            <td><img src="/images/galleryMelati/<?php echo $b['input_foto'];?>"height="60px" width="60px" /></td>
-          
+			<td><?php echo $u->fotoBarang ?></td>
+			<td><?php echo $u->namaBarang ?></td>
+			<td><?php echo $u->kategoriBarang ?></td>
+            <td>Rp.<?php echo $u->hargaBarang ?>,-</td>
+            <td><?php echo $u->stokBarang ?></td>
 			<td>
-				<a href="detail_barang.php?id=<?php echo $b['kode_barang']; ?>" class="btn btn-info">Detail</a>
-				<a href="edit_barang.php?id=<?php echo $b['kode_barang']; ?>" class="btn btn-warning">Edit</a>
-				<a onclick="if(confirm('Apakah anda yakin ingin menghapus data ini ??')){ location.href='hapus_barang.php?id=<?php echo $b['kode_barang']; ?>' }" class="btn btn-danger">Hapus</a>
+			    <?php echo anchor('http://localhost/BukuTamu/main/edit/'.$u->idBarang,'Edit'); ?>
+                <?php echo anchor('http://localhost/BukuTamu/main/hapus/'.$u->idBarang,'Hapus'); ?>
 			</td>
-		</tr>		
-		<?php 
-	}
-	?>
+		</tr>
+		<?php } ?>
 </table>
 <ul class="pagination">			
 			<?php 
