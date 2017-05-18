@@ -13,7 +13,7 @@
     <link href="<?php echo base_url();?>includes/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="<?php echo base_url();?>includes/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        
+
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url();?>includes/css/style.css" rel="stylesheet">
     <link href="<?php echo base_url();?>includes/css/style-responsive.css" rel="stylesheet">
@@ -39,13 +39,13 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>Selamat Datang Admin</b></a>
+            <a href="index.html" class="logo"><b>Selamat Datang, <?php echo $this->session->userdata('emailAdmin'); ?></b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+                    <li><a class="logout" href="<?php echo base_url('login/logout'); ?>">Logout</a></li>
             	</ul>
             </div>
         </header>

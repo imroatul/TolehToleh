@@ -36,8 +36,7 @@
 	  <div id="login-page">
 	  	<div class="container">
 
-		      <form class="form-login" >
-            <!--action="<?php echo base_url('login/aksi_login'); ?>" method="post"-->
+		      <form class="form-login" action="<?php echo base_url('login/aksi_login'); ?>" method="post">
 		        <h2 class="form-login-heading">Selamat datang, Juragan Tolah Toleh</h2>
 		        <div class="login-wrap">
 		            <input type="text" class="form-control" placeholder="Email" autofocus>
