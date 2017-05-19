@@ -24,7 +24,7 @@
                           <span>Barang</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="<?php echo base_url();?>index.php/main/tampil_barang">Tampil Barang</a></li>
+                          <li><a  href="<?php echo base_url();?>index.php/main/tampil_barang">Data Barang</a></li>
                       </ul>
                   </li>
 
