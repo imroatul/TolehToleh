@@ -9,19 +9,19 @@ class login extends CI_Controller
     $this->load->helper('url');
     $this->load->library('session');
     $this->load->database();
-    $this->load->model('m_login');
+    $this->load->model('login_model');
   }
 
   function index()
   {
-    if($this->session->userdata('emailAdmin'))
+    /*if($this->session->userdata('emailAdmin'))
     {
       redirect('login/sukses');
     }
     else
-    {
+    {*/
       $this->load->view('login_view');
-    }
+  //  }
   }
 
   function proses()

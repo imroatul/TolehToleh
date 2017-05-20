@@ -26,9 +26,6 @@
   </head>
 
   <body>
-    <?php echo validation_errors(); ?>
-   <?php echo form_open('login_verify'); ?>
-
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -36,12 +33,12 @@
 	  <div id="login-page">
 	  	<div class="container">
 
-		      <form class="form-login" action="<?php echo base_url('login/aksi_login'); ?>" method="post">
+		      <form class="form-login" action="<?php echo base_url('login/proses'); ?>" method="post">
 		        <h2 class="form-login-heading">Selamat datang, Juragan Tolah Toleh</h2>
 		        <div class="login-wrap">
-		            <input type="text" class="form-control" placeholder="Email" autofocus>
+		            <input type="text" name="emailAdmin "class="form-control" placeholder="Email" autofocus>
 		            <br>
-		            <input type="password" class="form-control" placeholder="Password">
+		            <input type="password" name="passwordAdmin" class="form-control" placeholder="Password">
 		            <label class="checkbox"></label>
 		            <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> LOGIN</button>
 		            <hr>

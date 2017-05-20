@@ -1,5 +1,5 @@
 <div class="content-admin">
-<button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-info"><span class="glyphicon glyphicon-plus"></span>&nbsp;Tambah Barang</button><br/>
+<button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-tosca"><span class="glyphicon glyphicon-plus"></span>&nbsp;Tambah Barang</button><br/>
 <br/>
 <?php
 	$per_hal=10;
@@ -16,7 +16,7 @@
 <form action="cari_petugas.php" method="get">
 	<div class="input-group col-md-5 col-md-offset-7">
 		<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search"></span></span>
-		<input type="text" class="form-control" placeholder="Cari Nama Petugas .." aria-describedby="basic-addon1" name="cari">	
+		<input type="text" class="form-control" placeholder="Cari Nama Petugas .." aria-describedby="basic-addon1" name="cari">
 	</div>
 </form>
 <br/>
@@ -75,12 +75,12 @@
 				$hasil = mysql_query($query);
 				$data  = mysql_fetch_array($hasil);
 				$idbarang = $data['idMaks'];
-															
+
 				//mengatur 2 karakter sebagai jumalh karakter yang tetap
 				//mengatur 3 karakter untuk jumlah karakter yang berubah-ubah
 				$noUrut = (int) substr($idbarang, 2, 3);
 				$noUrut++;
-												
+
 				//menjadikan S sebagai 1 karakter yang tetap
 				$char = "TT";
 				//%03s untuk mengatur 3 karakter di belakang S
