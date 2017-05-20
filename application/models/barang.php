@@ -1,9 +1,9 @@
 <?php
-class barang_model extends CI_Model{
+class barang extends CI_Model{
 	function tampil_data(){
         return $this->db->get('barang');
     }
-    
+
     function input_data($table,$data){
         $this->db->insert($table,$data);
     }

@@ -14,28 +14,29 @@
                   <li class="mt">
                       <a href="index.html">
                           <i class="fa fa-user"></i>
-                          <span>Profil</span>
+                          <span>Profil Toko</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-suitcase"></i>
-                          <span>Barang</span>
+                          <span>Barang Juragan</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="<?php echo base_url();?>index.php/main/tampil_barang">Data Barang</a></li>
+                          <li><a  href="<?php echo base_url();?>main/data_barang">Data Barang</a></li>
+                          <li><a  href="<?php echo base_url();?>main/tambah_barang">Tambah Barang</a></li>
                       </ul>
                   </li>
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-file-text"></i>
-                          <span>Laporan</span>
+                          <span>Transaksi Juragan</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="calendar.html">laporan Barang</a></li>
-                          <li><a  href="gallery.html">Laporan Penjualan</a></li>
+                          <li><a  href="calendar.html">Transaksi Baru</a></li>
+                          <li><a  href="gallery.html">Transaksi Sukses</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">

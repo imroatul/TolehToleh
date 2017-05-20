@@ -9,7 +9,7 @@ class login extends CI_Controller
     $this->load->helper('url');
     $this->load->library('session');
     $this->load->database();
-    $this->load->model('login_model');
+    $this->load->model('login');
   }
 
   function index()
@@ -20,7 +20,7 @@ class login extends CI_Controller
     }
     else
     {*/
-      $this->load->view('login_view');
+      $this->load->view('Login/login');
   //  }
   }
 
@@ -51,9 +51,9 @@ class login extends CI_Controller
   {
     if($this->session->userdata('emailAdmin'))
     {
-      $this->load->view('Main/header');
-			$this->load->view('Main/home');
-			$this->load->view('Main/footer');
+      $this->load->view('Juragan/Main/header');
+			$this->load->view('Juragan/Main/home');
+			$this->load->view('Juragan/Main/footer');
     }
     else
     {
