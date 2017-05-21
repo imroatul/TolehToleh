@@ -12,21 +12,17 @@
               	  <h5 class="centered">Tolah Toleh</h5>
 
                   <li class="mt">
-                      <a href="index.html">
+                      <a href="<?php echo base_url();?>main/profil_toko">
                           <i class="fa fa-user"></i>
                           <span>Profil Toko</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="<?php echo base_url();?>main/data_barang" >
                           <i class="fa fa-suitcase"></i>
                           <span>Barang Juragan</span>
                       </a>
-                      <ul class="sub">
-                          <li><a  href="<?php echo base_url();?>main/data_barang">Data Barang</a></li>
-                          <li><a  href="<?php echo base_url();?>main/tambah_barang">Tambah Barang</a></li>
-                      </ul>
                   </li>
 
                   <li class="sub-menu">
@@ -35,8 +31,8 @@
                           <span>Transaksi Juragan</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="calendar.html">Transaksi Baru</a></li>
-                          <li><a  href="gallery.html">Transaksi Sukses</a></li>
+                          <li><a href="<?php echo base_url();?>main/transaksi_baru">Transaksi Baru</a></li>
+                          <li><a href="<?php echo base_url();?>main/transaksi_sukses">Transaksi Sukses</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">

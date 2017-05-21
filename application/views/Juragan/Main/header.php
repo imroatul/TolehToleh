@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>Tolah Toleh</title>
+    <title href="<?php echo base_url();?>main/index">Tolah Toleh</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url();?>includes/css/bootstrap.css" rel="stylesheet">

@@ -4,6 +4,7 @@ class main extends CI_Controller {
     public function __construct()
 		{
 			parent::__construct();
+//      $this->load->model('profil');
 			$this->load->model('barang');
 			$this->load->helper('url');
 		}
@@ -15,15 +16,26 @@ class main extends CI_Controller {
 			$this->load->view('Juragan/Main/footer');
 		}
 
+    function profil_toko()
+    {
+      $this->load->view('Juragan/Main/header');
+      $this->load->view('Juragan/Main/home');
+
+//      $data['toko'] = $this->profil->tampil_toko()->result();
+      $this->load->view('Juragan/Profil/profil_toko');
+
+      $this->load->view('Juragan/Main/footer');
+    }
+
     function data_barang()
 		{
-        $this->load->view('Juragan/Main/header');
-        $this->load->view('Juragan/Main/home');
+      $this->load->view('Juragan/Main/header');
+      $this->load->view('Juragan/Main/home');
 
-        $data['barang'] = $this->barang->tampil_data()->result();
-        $this->load->view('Juragan/Barang/data_barang',$data);
+      $data['barang'] = $this->barang->tampil_data()->result();
+      $this->load->view('Juragan/Barang/data_barang',$data);
 
-				$this->load->view('Juragan/Main/footer');
+			$this->load->view('Juragan/Main/footer');
     }
 
     function tambah_barang()
@@ -56,6 +68,27 @@ class main extends CI_Controller {
         $where = array('idBarang' => $idBarang);
         $this->barang_model->hapus_data('barang',$where);
         redirect('http://localhost/TolahToleh/main/index');
+    }
+
+    function transaksi_baru()
+    {
+      $this->load->view('Juragan/Main/header');
+      $this->load->view('Juragan/Main/home');
+
+//      $data['toko'] = $this->profil->tampil_toko()->result();
+      $this->load->view('Juragan/Transaksi/transaksi_baru');
+
+      $this->load->view('Juragan/Main/footer');
+    }
+    function transaksi_selesai()
+    {
+      $this->load->view('Juragan/Main/header');
+      $this->load->view('Juragan/Main/home');
+
+//      $data['toko'] = $this->profil->tampil_toko()->result();
+      $this->load->view('Juragan/Transaksi/transaksi_sukses');
+
+      $this->load->view('Juragan/Main/footer');
     }
 }
 
