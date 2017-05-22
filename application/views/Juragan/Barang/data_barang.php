@@ -13,10 +13,10 @@
 	<a style="margin-bottom:10px" href="pdf_petugas.php" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  PDF</a>
    	<a style="margin-bottom:10px" href="excel_member.php" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
 </div>
-<form action="cari_petugas.php" method="get">
+<form action="http://localhost/TolahToleh/index.php/main/cari_barang" method="get">
 	<div class="input-group col-md-5 col-md-offset-7">
 		<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search"></span></span>
-		<input type="text" class="form-control" placeholder="Cari Barang .." aria-describedby="basic-addon1" name="cari">
+		<input type="text" class="form-control" placeholder="Cari Barang .." aria-describedby="basic-addon1" name="cari_barang">
 	</div>
 </form>
 <br/>
@@ -31,8 +31,8 @@
 		<th class="col-md-0">Pilihan</th>
 	</tr>
 	<?php
-	if(isset($_GET['cari'])){
-		$cari=mysql_real_escape_string($_GET['cari']);
+	if(isset($_GET['cari_barang'])){
+		$cari=mysql_real_escape_string($_GET['cari_barang']);
 		$brg=mysql_query("select * from barang where namaBarang like '$cari'");
 	}else{
 		$brg=mysql_query("select * from barang limit $start, $per_hal");
@@ -48,8 +48,8 @@
             <td>Rp.<?php echo $u->hargaBarang ?>,-</td>
             <td><?php echo $u->stokBarang ?></td>
 			<td>
-			    <?php echo anchor('http://localhost/BukuTamu/main/edit/'.$u->idBarang,'Edit'); ?>
-                <?php echo anchor('http://localhost/BukuTamu/main/hapus/'.$u->idBarang,'Hapus'); ?>
+			    <?php echo anchor('http://localhost/TolahToleh/main/edit/'.$u->idBarang,'Edit'); ?>
+                <?php echo anchor('http://localhost/TolahToleh/main/hapus/'.$u->idBarang,'Hapus'); ?>
 			</td>
 		</tr>
 		<?php } ?>
