@@ -1,21 +1,44 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class main extends CI_Controller {
-    public function __construct()
-		{
-			parent::__construct();
-//      $this->load->model('profil');
-			$this->load->model('barang');
-			$this->load->helper('url');
-		}
+class Main extends CI_Controller {
+    
+	public function index()
+	{
+		$this->load->view('login');
+	}
 
-		public function index()
-		{
-			$this->load->view('Juragan/Main/header');
-			$this->load->view('Juragan/Main/home');
-			$this->load->view('Juragan/Main/footer');
+	public function cek_login()
+	{
+		$data = array('namaAdmin' => $this->input->post('namaAdmin') , 
+					  'passwordAdmin' => $this->input->post('passwordAdmin')
+					  );
+		$hasil = $this->login->cek_user($data);
+		if ($hasil->num_rows() == 1){
+			foreach($hasil->result() as $sess)
+            {
+              $sess_data['logged_in'] = 'Sudah Login';
+              $sess_data['namaAdmin'] = $sess->namaAdmin;
+              $sess_data['level'] = $sess->level;
+              $this->session->set_userdata($sess_data);
+            }
+			if ($this->session->userdata('level')=='Superadmin'){
+				redirect('Admin/admin');
+			}
+			elseif ($this->session->userdata('level')=='Admin'){
+				redirect('Juragan/juragan');
+			}
 		}
+		else
+		{
+			echo " <script>alert('Gagal Login: Cek username , password!');history.go(-1);</script>";
+		}
+		
+	}
 
+	public function logout() {
+		$this->session->sess_destroy();
+		redirect('main');
+	} 
     function profil_toko()
     {
       $this->load->view('Juragan/Main/header');
@@ -128,3 +151,4 @@ class main extends CI_Controller {
 
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */
+?>

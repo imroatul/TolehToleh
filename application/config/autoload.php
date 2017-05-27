@@ -65,7 +65,7 @@ $autoload['libraries'] = array('database','session');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url');
+$autoload['helper'] = array('url','form','file');
 
 
 /*
@@ -110,7 +110,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array();
+$autoload['model'] = array('Admin/login','Admin/barang','Juragan/barang','Juragan/profil');
 
 
 /* End of file autoload.php */
