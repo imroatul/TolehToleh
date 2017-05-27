@@ -19,9 +19,9 @@ class barang extends CI_Model{
 		$this->db->update($table,$data);
 	}
 	function search_barang($keyword){
-        $this->db->like('tolahtoleh',$keyword);
-        $query = $this->db->get('barang');
-        return $query->result();
+        $cari = $this->input->GET('cari', TRUE);
+		$data = $this->db->query("SELECT * from barang where namaBarang like '%$cari%' ");
+		return $data->result();
     }
 }
 ?>
