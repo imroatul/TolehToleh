@@ -36,7 +36,9 @@ class Main extends CI_Controller {
 	}
 
 	public function logout() {
-		$this->session->sess_destroy();
+		$this->session->unset_userdata('namaAdmin');
+		$this->session->unset_userdata('level');
+		session_destroy();
 		redirect('main');
 	} 
     function profil_toko()
