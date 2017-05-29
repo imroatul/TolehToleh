@@ -12,14 +12,14 @@
               	  <h5 class="centered">Tolah Toleh</h5>
 
                   <li class="mt">
-                      <a href="<?php echo base_url();?>main/profil_toko">
+                      <a href="<?php echo base_url();?>Juragan/juragan/profil_toko">
                           <i class="fa fa-user"></i>
                           <span>Profil Toko</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="<?php echo base_url();?>main/data_barang" >
+                      <a href="<?php echo base_url();?>Juragan/juragan/data_barang" >
                           <i class="fa fa-suitcase"></i>
                           <span>Barang Juragan</span>
                       </a>

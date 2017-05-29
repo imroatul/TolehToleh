@@ -1,7 +1,7 @@
 	<?php
-class barang extends CI_Model{
+class admin_model extends CI_Model{
 	function tampil_data(){
-        return $this->db->get('barang');
+        return $this->db->get('admin');
     }
 
     function input_data($table,$data){
@@ -20,7 +20,7 @@ class barang extends CI_Model{
 	}
 	function search_barang($keyword){
         $cari = $this->input->GET('cari', TRUE);
-		$data = $this->db->query("SELECT * from barang where namaBarang like '%$cari%' ");
+		$data = $this->db->query("SELECT * from admin where namaAdmin like '%$cari%' ");
 		return $data->result();
     }
 }

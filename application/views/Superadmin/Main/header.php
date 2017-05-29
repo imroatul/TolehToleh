@@ -45,7 +45,11 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
+<<<<<<< HEAD:application/views/Superadmin/Main/header.php
                     <li><a class="logout" href="<?php echo base_url();?>main/logout">Logout</a></li>
+=======
+                    <li><a class="logout" href="<?php echo base_url('main/logout'); ?>">Logout</a></li>
+>>>>>>> 3f4572be6c496099a31a7c025c52097b8b91c912:application/views/Juragan/Main/header.php
             	</ul>
             </div>
         </header>

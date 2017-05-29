@@ -12,9 +12,9 @@
 
 <div class="container">
   <h3><span class="glyphicon glyphicon-briefcase"></span>  Edit Data Barang</h3>
-  <a class="btn" href="<?php echo base_url(). 'index.php/main/data_barang'; ?>"><span class="glyphicon glyphicon-arrow-left"></span>  Kembali</a>
+  <a class="btn" href="<?php echo base_url(). 'index.php/Juragan/juragan/data_barang'; ?>"><span class="glyphicon glyphicon-arrow-left"></span>  Kembali</a>
   <?php foreach($barang as $u){ ?>
-	<form action="<?php echo base_url(). 'index.php/main/update'; ?>" method="post">
+	<form action="<?php echo base_url(). 'index.php/Juragan/juragan/update'; ?>" method="post">
 		<table class="table">
 			<tr>
 				<td></td>
@@ -49,7 +49,7 @@
 			<tr>
 				<td></td>
 				<td><input type="submit" class="btn btn-info" value="Simpan">
-               	<a class="btn btn-info" href="<?php echo base_url(). 'index.php/main/data_barang'; ?>">Batal</a>
+               	<a class="btn btn-info" href="<?php echo base_url(). 'index.php/Juragan/juragan/data_barang'; ?>">Batal</a>
 
                 </td>
 			</tr>
