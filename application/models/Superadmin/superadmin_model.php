@@ -1,5 +1,5 @@
 	<?php
-class admin_model extends CI_Model{
+class Superadmin_model extends CI_Model{
 	function tampil_data(){
         return $this->db->get('admin');
     }

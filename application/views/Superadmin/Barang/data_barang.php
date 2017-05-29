@@ -10,8 +10,8 @@
 	$start = ($page - 1) * $per_hal;
 ?>
 <div class="col-md-7">
-	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Juragan/juragan/pdf_barang" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  PDF</a>
-   	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Juragan/juragan/excel_barang" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
+	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Admin/admin/pdf_barang" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  PDF</a>
+   	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Admin/admin/excel_barang" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
 </div>
 <form action="http://localhost/TolahToleh/index.php/main/cari_barang" method="get">
 	<div class="input-group col-md-5 col-md-offset-7">
@@ -48,8 +48,8 @@
             <td>Rp.<?php echo $u->hargaBarang ?>,-</td>
             <td><?php echo $u->stokBarang ?></td>
 			<td>
-			    <?php echo anchor('http://localhost/TolahToleh/Juragan/juragan/edit/'.$u->idBarang,'Edit'); ?>
-                <?php echo anchor('http://localhost/TolahToleh/Juragan/juragan/hapus/'.$u->idBarang,'Hapus'); ?>
+			    <?php echo anchor('http://localhost/TolahToleh/Admin/admin/edit/'.$u->idBarang,'Edit'); ?>
+                <?php echo anchor('http://localhost/TolahToleh/Admin/juragadminan/hapus/'.$u->idBarang,'Hapus'); ?>
 			</td>
 		</tr>
 		<?php } ?>
@@ -86,7 +86,7 @@
 				//%03s untuk mengatur 3 karakter di belakang S
 				$IDbaru = $char . sprintf("%03s", $noUrut);
 				?>
-                <form role="form" action="http://localhost/TolahToleh/index.php/main/tambah_aksi" method="post">
+                <form role="form" action="http://localhost/TolahToleh/index.php/main/Admin/admin/tambah_aksi" method="post">
                       <div class="form-group">
                       <input type="text" class="form-control" placeholder="Kode" name="idBarang" value="<?php echo $IDbaru; ?>" readonly= "readonly">
                       </div>

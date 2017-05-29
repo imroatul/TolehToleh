@@ -1,17 +1,7 @@
 <?php
 session_start();
 class Admin extends CI_Controller {
-<<<<<<< HEAD
 
-	public function index()
-	{
-
-		$this->load->view('Admin/Main/header');
-    $this->load->view('Admin/Main/home');
-		$this->load->view('Admin/index');
-    $this->load->view('Admin/Main/footer');
-=======
-	
 	public function __construct() {
 		parent::__construct();
 		if ($this->session->userdata('namaAdmin')=="") {
@@ -26,95 +16,92 @@ class Admin extends CI_Controller {
       	$this->load->view('Admin/Main/home');
 		$this->load->view('Admin/index');
     	$this->load->view('Admin/Main/footer');
->>>>>>> 3f4572be6c496099a31a7c025c52097b8b91c912
 	}
-	
-	/*--------------TAMBAH ADMIN--------------------*/
-	function data_admin()
+	function profil_toko()
+    {
+      $this->load->view('Admin/Main/header');
+      $this->load->view('Admin/Main/home');
+
+//      $data['toko'] = $this->profil->tampil_toko()->result();
+      $this->load->view('Admin/Profil/profil_toko');
+
+      $this->load->view('Admin/Main/footer');
+    }
+
+    function data_barang()
 		{
       $this->load->view('Admin/Main/header');
       $this->load->view('Admin/Main/home');
 
-      $data['admin'] = $this->admin_model->tampil_data()->result();
-      $this->load->view('Admin/Admin/data_admin',$data);
+      $data['barang'] = $this->barang->tampil_data()->result();
+      $this->load->view('Admin/Barang/data_barang',$data);
 
 	  $this->load->view('Admin/Main/footer');
     }
 	
-    function tambah_admin()
+    function tambah_aksi()
 		{
-		$idAdmin = $this->input->post('idAdmin');
-		$namaAdmin = $this->input->post('namaAdmin');
-		$passwordAdmin = $this->input->post('passwordAdmin');
-		$level = $this->input->post('level');
-    	$emailAdmin = $this->input->post('emailAdmin');
-    	$jkAdmin = $this->input->post('jkAdmin');
-		$alamatAdmin = $this->input->post('alamatAdmin');
-		$telpAdmin = $this->input->post('telpAdmin');
+		$idBarang = $this->input->post('idBarang');
+		$fotoBarang = $this->input->post('fotoBarang');
+		$namaBarang = $this->input->post('namaBarang');
+		$kategoriBarang = $this->input->post('kategoriBarang');
+    	$hargaBarang = $this->input->post('hargaBarang');
+    	$stokBarang = $this->input->post('stokBarang');
 
 			$data = array(
-				'idAdmin' => $idAdmin,
-     			'namaAdmin' => $namaAdmin,
-				'passwordAdmin' => $passwordAdmin,
-      			'level' => $level,
-      			'emailAdmin' => $emailAdmin,
-				'jkAdmin' => $jkAdmin,
-				'alamatAdmin' => $alamatAdmin,
-				'telpAdmin' => $telpAdmin
+				'idBarang' => $idBarang,
+     			'fotoBarang' => $fotoBarang,
+				'namaBarang' => $namaBarang,
+      			'kategoriBarang' => $kategoriBarang,
+      			'hargaBarang' => $hargaBarang,
+				'stokBarang' => $stokBarang
 			);
-			$this->admin_model->input_data('admin',$data);
-			redirect('http://localhost/TolahToleh/index.php/Admin/admin/data_admin');
+			$this->barang->input_data('barang',$data);
+			redirect('http://localhost/TolahToleh/index.php/Admin/admin/data_barang');
 		}
 
-    function hapus($idAdmin){
-        $where = array('idAdmin' => $idAdmin);
-        $this->admin_model->hapus_data('admin',$where);
-        redirect('http://localhost/TolahToleh/index.php/Admin/admin/data_admin');
+    function hapus($idBarang){
+        $where = array('idBarang' => $idBarang);
+        $this->barang->hapus_data('barang',$where);
+        redirect('http://localhost/TolahToleh/index.php/Admin/admin/data_barang');
     }
 
-	function edit($idAdmin){
-		$where = array('idAdmin' => $idAdmin);
-		$data['baradminang'] = $this->admin_model->edit_data($where,'admin')->result();
+	function edit($idBarang){
+		$where = array('idBarang' => $idBarang);
+		$data['barang'] = $this->barang->edit_data($where,'barang')->result();
 		$this->load->view('Admin/Main/header');
 		$this->load->view('Admin/Main/home');
 		$this->load->view('Admin/Main/footer');
-		$this->load->view('Admin/Admin/edit_admin',$data);
+		$this->load->view('Admin/Barang/edit_barang',$data);
 	}
 	
 	function update(){
-		$idAdmin = $this->input->post('idAdmin');
-		$namaAdmin = $this->input->post('namaAdmin');
-		$passwordAdmin = $this->input->post('passwordAdmin');
-		$level = $this->input->post('level');
-    	$emailAdmin = $this->input->post('emailAdmin');
-    	$jkAdmin = $this->input->post('jkAdmin');
-		$alamatAdmin = $this->input->post('alamatAdmin');
-		$telpAdmin = $this->input->post('telpAdmin');
+		$idBarang = $this->input->post('idBarang');
+		$namaBarang = $this->input->post('namaBarang');
+		$kategoriBarang = $this->input->post('kategoriBarang');
+		$hargaBarang = $this->input->post('hargaBarang');
+		$stokBarang = $this->input->post('stokBarang');
 	 
 		$data = array(
-				'idAdmin' => $idAdmin,
-     			'namaAdmin' => $namaAdmin,
-				'passwordAdmin' => $passwordAdmin,
-      			'level' => $level,
-      			'emailAdmin' => $emailAdmin,
-				'jkAdmin' => $jkAdmin,
-				'alamatAdmin' => $alamatAdmin,
-				'telpAdmin' => $telpAdmin
-			);
-	 
-		$where = array(
-			'idAdmin' => $idAdmin
+			'namaBarang' => $namaBarang,
+			'kategoriBarang' => $kategoriBarang,
+			'hargaBarang' => $hargaBarang,
+			'stokBarang' => $stokBarang
 		);
 	 
-		$this->admin_model->update_data($where,$data,'admin');
-		redirect('http://localhost/TolahToleh/index.php/Admin/admin/data_admin');
+		$where = array(
+			'idBarang' => $idBarang
+		);
+	 
+		$this->barang->update_data($where,$data,'barang');
+		redirect('http://localhost/TolahToleh/index.php/Admin/admin/data_barang');
 	}
 	
-	function cari_admin()
+	function cari_barang()
     {
         $keyword = $this->input->post('keyword');
-        $data['results'] = $this->admin_model->search_admin($keyword);
-        $this->load->view('Admin/Admin/cari_admin',$data);
+        $data['results'] = $this->barang->search_barang($keyword);
+        $this->load->view('Admin/Barang/cari_barang',$data);
     }
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */

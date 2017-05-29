@@ -10,10 +10,10 @@
 	$start = ($page - 1) * $per_hal;
 ?>
 <div class="col-md-7">
-	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Admin/admin/pdf_admin" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  PDF</a>
-   	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Admin/admin/excel_admin" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
+	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Superadmin/superadmin/pdf_admin" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  PDF</a>
+   	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Superadmin/superadmin/excel_admin" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
 </div>
-<form action="http://localhost/TolahToleh/index.php/main/cari_barang" method="get">
+<form action="http://localhost/TolahToleh/index.php/Superadmin/superadmin/cari_barang" method="get">
 	<div class="input-group col-md-5 col-md-offset-7">
 		<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search"></span></span>
 		<input type="text" class="form-control" placeholder="Cari Barang .." aria-describedby="basic-addon1" name="cari">
@@ -52,8 +52,8 @@
             <td><?php echo $u->alamatAdmin ?></td>
             <td><?php echo $u->telpAdmin ?></td>
 			<td>
-			    <?php echo anchor('http://localhost/TolahToleh/index.php/Admin/admin/edit/'.$u->idAdmin,'Edit'); ?>
-                <?php echo anchor('http://localhost/TolahToleh/index.php/Admin/admin/hapus/'.$u->idAdmin,'Hapus'); ?>
+			    <?php echo anchor('http://localhost/TolahToleh/index.php/Superadmin/superadmin/edit/'.$u->idAdmin,'Edit'); ?>
+                <?php echo anchor('http://localhost/TolahToleh/index.php/Superadmin/superadmin/hapus/'.$u->idAdmin,'Hapus'); ?>
 			</td>
 		</tr>
 		<?php } ?>
@@ -90,7 +90,7 @@
 				//%03s untuk mengatur 3 karakter di belakang S
 				$IDbaru = $char . sprintf("%02s", $noUrut);
 				?>
-                <form role="form" action="http://localhost/TolahToleh/index.php/Admin/admin/tambah_admin" method="post">
+                <form role="form" action="http://localhost/TolahToleh/index.php/Superadmin/superadmin/tambah_superadmin" method="post">
                       <div class="form-group">
                       <input type="text" class="form-control" placeholder="Kode" name="idAdmin" value="<?php echo $IDbaru; ?>" readonly= "readonly">
                       </div>

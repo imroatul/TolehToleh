@@ -1,6 +1,6 @@
 
       <!-- **********************************************************************************************************************************************************
-      main SIDEBAR MENU
+      MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
       <!--sidebar start-->
       <aside>
@@ -14,19 +14,14 @@
                   <li class="mt">
                       <a href="<?php echo base_url();?>Admin/admin/profil_toko">
                           <i class="fa fa-user"></i>
-                          <span>Profil Superadmin</span>
+                          <span>Profil Toko</span>
                       </a>
                   </li>
-				  <li class="sub-menu">
-                      <a href="<?php echo base_url();?>Admin/admin/data_admin" >
-                          <i class="fa fa-suitcase"></i>
-                          <span>Data Admin</span>
-                      </a>
-                  </li>
+
                   <li class="sub-menu">
                       <a href="<?php echo base_url();?>Admin/admin/data_barang" >
                           <i class="fa fa-suitcase"></i>
-                          <span>Data Barang</span>
+                          <span>Barang Juragan</span>
                       </a>
                   </li>
               </ul>
@@ -36,7 +31,7 @@
       <!--sidebar end-->
 
       <!-- **********************************************************************************************************************************************************
-      main CONTENT
+      MAIN CONTENT
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
       <section id="main-content">

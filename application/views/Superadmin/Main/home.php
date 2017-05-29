@@ -1,6 +1,6 @@
 
       <!-- **********************************************************************************************************************************************************
-      MAIN SIDEBAR MENU
+      main SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
       <!--sidebar start-->
       <aside>
@@ -12,16 +12,21 @@
               	  <h5 class="centered">Tolah Toleh</h5>
 
                   <li class="mt">
-                      <a href="<?php echo base_url();?>Juragan/juragan/profil_toko">
+                      <a href="<?php echo base_url();?>Superadmin/superadmin/profil_toko">
                           <i class="fa fa-user"></i>
-                          <span>Profil Toko</span>
+                          <span>Profil Superadmin</span>
                       </a>
                   </li>
-
-                  <li class="sub-menu">
-                      <a href="<?php echo base_url();?>Juragan/juragan/data_barang" >
+				  <li class="sub-menu">
+                      <a href="<?php echo base_url();?>Superadmin/superadmin/data_superadmin" >
                           <i class="fa fa-suitcase"></i>
-                          <span>Barang Juragan</span>
+                          <span>Data Admin</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="<?php echo base_url();?>Superadmin/superadmin/data_barang" >
+                          <i class="fa fa-suitcase"></i>
+                          <span>Data Barang</span>
                       </a>
                   </li>
               </ul>
@@ -31,7 +36,7 @@
       <!--sidebar end-->
 
       <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
+      main CONTENT
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
       <section id="main-content">
