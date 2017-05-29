@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Main extends CI_Controller {
-    
+
 	public function index()
 	{
 		$this->load->view('login');
@@ -9,7 +9,7 @@ class Main extends CI_Controller {
 
 	public function cek_login()
 	{
-		$data = array('namaAdmin' => $this->input->post('namaAdmin') , 
+		$data = array('namaAdmin' => $this->input->post('namaAdmin') ,
 					  'passwordAdmin' => $this->input->post('passwordAdmin')
 					  );
 		$hasil = $this->login->cek_user($data);
@@ -21,24 +21,24 @@ class Main extends CI_Controller {
               $sess_data['level'] = $sess->level;
               $this->session->set_userdata($sess_data);
             }
-			if ($this->session->userdata('level')=='Superadmin'){
+			if ($this->session->userdata('level')=='Admin'){
 				redirect('Admin/admin');
 			}
-			elseif ($this->session->userdata('level')=='Admin'){
-				redirect('Juragan/juragan');
+			elseif ($this->session->userdata('level')=='Superadmin'){
+				redirect('Superadmin/superadmin');
 			}
 		}
 		else
 		{
 			echo " <script>alert('Gagal Login: Cek username , password!');history.go(-1);</script>";
 		}
-		
+
 	}
 
 	public function logout() {
 		$this->session->sess_destroy();
 		redirect('main');
-	} 
+	}
     function profil_toko()
     {
       $this->load->view('Juragan/Main/header');
@@ -60,7 +60,7 @@ class Main extends CI_Controller {
 
 	  $this->load->view('Juragan/Main/footer');
     }
-	
+
     function tambah_aksi()
 		{
 		$idBarang = $this->input->post('idBarang');
@@ -96,36 +96,36 @@ class Main extends CI_Controller {
 		$this->load->view('Juragan/Main/footer');
 		$this->load->view('Juragan/Barang/edit_barang',$data);
 	}
-	
+
 	function update(){
 		$idBarang = $this->input->post('idBarang');
 		$namaBarang = $this->input->post('namaBarang');
 		$kategoriBarang = $this->input->post('kategoriBarang');
 		$hargaBarang = $this->input->post('hargaBarang');
 		$stokBarang = $this->input->post('stokBarang');
-	 
+
 		$data = array(
 			'namaBarang' => $namaBarang,
 			'kategoriBarang' => $kategoriBarang,
 			'hargaBarang' => $hargaBarang,
 			'stokBarang' => $stokBarang
 		);
-	 
+
 		$where = array(
 			'idBarang' => $idBarang
 		);
-	 
+
 		$this->barang->update_data($where,$data,'barang');
 		redirect('http://localhost/TolahToleh/index.php/main/data_barang');
 	}
-	
+
 	function cari_barang()
     {
         $keyword = $this->input->post('keyword');
         $data['results'] = $this->barang->search_barang($keyword);
         $this->load->view('Juragan/Barang/cari_barang',$data);
     }
-	
+
     function transaksi_baru()
     {
       $this->load->view('Juragan/Main/header');
@@ -136,7 +136,7 @@ class Main extends CI_Controller {
 
       $this->load->view('Juragan/Main/footer');
     }
-	
+
     function transaksi_selesai()
     {
       $this->load->view('Juragan/Main/header');

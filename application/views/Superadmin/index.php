@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1>Halaman member | <a href="<?php echo base_url('index.php/auth/logout'); ?>">Logout</a></h1>
+<h1>Halaman superadmin</h1>
 
 </body>
 </html>
