@@ -110,7 +110,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('Admin/login','Admin/barang','Juragan/barang','Juragan/profil');
+$autoload['model'] = array('Admin/login','Admin/admin_model','barang','profil');
 
 
 /* End of file autoload.php */

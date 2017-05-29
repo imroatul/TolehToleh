@@ -12,44 +12,52 @@
 
 <div class="container">
   <h3><span class="glyphicon glyphicon-briefcase"></span>  Edit Data Barang</h3>
-  <a class="btn" href="<?php echo base_url(). 'index.php/main/data_barang'; ?>"><span class="glyphicon glyphicon-arrow-left"></span>  Kembali</a>
-  <?php foreach($barang as $u){ ?>
-	<form action="<?php echo base_url(). 'index.php/main/update'; ?>" method="post">
+  <a class="btn" href="<?php echo base_url(). 'index.php/Admin/admin/data_admin'; ?>"><span class="glyphicon glyphicon-arrow-left"></span>  Kembali</a>
+  <?php foreach($admin as $u){ ?>
+	<form action="<?php echo base_url(). 'index.php/Admin/admin/update'; ?>" method="post">
 		<table class="table">
 			<tr>
 				<td></td>
-				<td><input type="hidden" name="idBarang" value="<?php echo $u->idBarang ?>"></td>
+				<td><input type="hidden" name="idAdmin" value="<?php echo $u->idAdmin ?>"></td>
+			</tr>
+			<tr>
+				<td>Nama Admin</td>
+				<td><input type="text" class="form-control" name="namaAdmin" value="<?php echo $u->namaAdmin ?>"></td>
 			</tr>
             <tr>
-				<td>Foto</td>
-				<td><img src="images/galleryMelati/<?php echo $u->fotoBarang;?>"height="60px" width="60px" /><input type="file" class="form-control" name="fotoBarang"></td>
+				<td>Password</td>
+				<td><input type="text" class="form-control" name="passwordAdmin" value="<?php echo $u->passwordAdmin ?>"></td>
 			</tr>
 			<tr>
-				<td>Nama Barang</td>
-				<td><input type="text" class="form-control" name="namaBarang" value="<?php echo $u->namaBarang ?>"></td>
-			</tr>
-			<tr>
-				<td>Kategori Barang</td>
+				<td>Level</td>
 				<td>
-                <select name="kategoriBarang" required>
-      <option value=""></option>
-      <option value="Makanan" <?php if($u->kategoriBarang == 'Makanan'){ echo 'selected'; } ?>>Makanan</option> 
-      <option value="Minuman" <?php if($u->kategoriBarang == 'Minuman'){ echo 'selected'; }?>>Minuman</option>
-     </select>
+                <select name="level" required>
+                  <option value=""></option>
+                  <option value="Superadmin" <?php if($u->level == 'Superadmin'){ echo 'selected'; } ?>>Superadmin</option> 
+                  <option value="Admin" <?php if($u->level == 'Admin'){ echo 'selected'; }?>>Admin</option>
+                </select>
                 <br/></td>
 			</tr>
             <tr>
-				<td>Harga</td>
-				<td><input type="text" class="form-control" name="hargaBarang" value="<?php echo $u->hargaBarang ?>"></td>
+				<td>E-mail</td>
+				<td><input type="text" class="form-control" name="emailAdmin" value="<?php echo $u->emailAdmin ?>"></td>
 			</tr>
 			<tr>
-				<td>Stok</td>
-				<td><input type="text" class="form-control" name="stokBarang" value="<?php echo $u->stokBarang ?>"></td>
+				<td>Jenis Kelamin</td>
+				<td><input type="text" class="form-control" name="jkAdmin" value="<?php echo $u->jkAdmin ?>"></td>
+			</tr>
+            <tr>
+				<td>Alamat</td>
+				<td><input type="text" class="form-control" name="alamatAdmin" value="<?php echo $u->alamatAdmin ?>"></td>
+			</tr>
+            <tr>
+				<td>Telepon</td>
+				<td><input type="text" class="form-control" name="telpAdmin" value="<?php echo $u->telpAdmin ?>"></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td><input type="submit" class="btn btn-info" value="Simpan">
-               	<a class="btn btn-info" href="<?php echo base_url(). 'index.php/main/data_barang'; ?>">Batal</a>
+               	<a class="btn btn-info" href="<?php echo base_url(). 'index.php/Admin/admin/data_admin'; ?>">Batal</a>
 
                 </td>
 			</tr>
