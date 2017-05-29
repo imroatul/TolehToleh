@@ -40,7 +40,6 @@ class Main extends CI_Controller {
 		$this->session->unset_userdata('level');
 		session_destroy();
 		redirect('main');
-<<<<<<< HEAD
 	}
     function profil_toko()
     {
@@ -150,9 +149,9 @@ class Main extends CI_Controller {
 
       $this->load->view('Juragan/Main/footer');
     }
-=======
-	} 
->>>>>>> 3f4572be6c496099a31a7c025c52097b8b91c912
+
+	}
+
 }
 
 /* End of file welcome.php */
