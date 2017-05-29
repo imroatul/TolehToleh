@@ -1,6 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Main extends CI_Controller {
+class Main extends CI_Controller
+{
+	public function web()
+	{
+		$this->load->view('Web/web');
+	}
 
 	public function index()
 	{
@@ -152,7 +157,6 @@ class Main extends CI_Controller {
 
 	}
 
-}
 
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */
