@@ -4,14 +4,15 @@ class Main extends CI_Controller {
     
 	public function index()
 	{
+		$this->load->view('Header');
 		$this->load->view('login');
+		$this->load->view('Footer');
 	}
 
 	public function cek_login()
 	{
 		$data = array('namaAdmin' => $this->input->post('namaAdmin') , 
-					  'passwordAdmin' => $this->input->post('passwordAdmin')
-					  );
+					  'passwordAdmin' => $this->input->post('passwordAdmin'));
 		$hasil = $this->login->cek_user($data);
 		if ($hasil->num_rows() == 1){
 			foreach($hasil->result() as $sess)
