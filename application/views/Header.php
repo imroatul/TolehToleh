@@ -2,7 +2,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Animated Login Form</title>
+  <title>Login TolahToleh</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
@@ -18,7 +18,7 @@
 
 html, body {
   height: 100%;
-  background-color: #F15A5C;
+  background-color: #2c3e50;
   font-family: "Roboto Slab", serif;
   color: white;
 }
@@ -56,7 +56,7 @@ button {
   padding-top: 0.5em;
   border: none;
   border-radius: 2px;
-  background-color: #7E5AF1;
+  background-color: #00BFA5;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
   color: white;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
@@ -72,7 +72,7 @@ small {
 
 .login--container {
   width: 600px;
-  background-color: #F15A5C;
+  background-color: #2c3e50;
   margin: 0 auto;
   position: relative;
   top: 25%;
@@ -80,7 +80,7 @@ small {
 
 .login--toggle-container {
   position: absolute;
-  background-color: #F15A5C;
+  background-color: #2c3e50;
   right: 0;
   line-height: 2.5em;
   width: 50%;
@@ -103,7 +103,7 @@ small {
 
 .login--username-container, .login--password-container {
   float: left;
-  background-color: #F15A5C;
+  background-color: #2c3e50;
   width: 50%;
   height: 120px;
   padding: 0.5em;
@@ -118,7 +118,7 @@ small {
 }
 .login--active .login--username-container {
   transform: perspective(1000px) rotateY(0deg);
-  background-color: #F15A5C;
+  background-color: #2c3e50;
 }
 
 footer {

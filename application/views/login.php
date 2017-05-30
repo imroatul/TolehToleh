@@ -21,8 +21,8 @@ Password
 </form>
   </div>
   <div class='login--toggle-container'>
-    <small>Selamat Datang,</small>
-    <div class='js-toggle-login'>Login</div>
-    <small>TolahToleh</small>
+    <small>Selamat Datang di,</small>
+    <div class='js-toggle-login'>TolahToleh</div>
+    <h5>Copyright &copy INTEAM 2017</h5>
   </div>
 </div>
