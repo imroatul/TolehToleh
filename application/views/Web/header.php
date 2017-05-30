@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootshop online Shopping cart</title>
+    <title>Tolah Toleh - Toko Oleh Oleh Online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -14,12 +14,6 @@
 	<link href="<?php echo base_url();?>includes/web/themes/css/font-awesome.css" rel="stylesheet" type="text/css">
 <!-- Google-code-prettify -->
 	<link href="<?php echo base_url();?>includes/web/themes/js/google-code-prettify/prettify.css" rel="stylesheet"/>
-<!-- fav and touch icons -->
-    <link rel="shortcut icon" href="<?php echo base_url();?>includes/webthemes/images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url();?>includes/web/themes/images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url();?>includes/web/themes/images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url();?>includes/web/themes/images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="<?php echo base_url();?>includes/web/themes/images/ico/apple-touch-icon-57-precomposed.png">
 	<style type="text/css" id="enject"></style>
   </head>
 <body>
@@ -47,8 +41,6 @@
 			<option>Semua Kategori</option>
 			<option>Makanan</option>
 			<option>Minuman</option>
-			<option>Pakaian</option>
-			<option>Lain-lain</option>
 		</select>
 		  <button type="submit" id="submitButton" class="btn btn-primary">Cari</button>
     </form>
@@ -65,7 +57,7 @@
 
 		  <div class="item active">
 		  <div class="container">
-        <img style="width:100%" src="<?php echo base_url();?>includes/web/themes/images/carousel/1.png" alt="special offers"/>
+        <img style="width:100%" src="<?php echo base_url();?>includes/web/themes/images/carousel/1.png" alt=""/>
 		  </div>
 		  </div>
 
@@ -77,13 +69,7 @@
 
 		  <div class="item">
         <div class="container">
-          <img src="<?php echo base_url();?>includes/web/themes/images/carousel/3.png" alt=""/>
-        </div>
-      </div>
-
-		  <div class="item">
-        <div class="container">
-          <img src="<?php echo base_url();?>includes/web/themes/images/carousel/4.png" alt=""/>
+          <img style="width:100%" src="<?php echo base_url();?>includes/web/themes/images/carousel/3.png" alt=""/>
         </div>
       </div>
 
