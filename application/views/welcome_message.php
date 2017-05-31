@@ -84,11 +84,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$no = 1;
 			foreach($hasil as $r){ ?>
 			<tr>
-				<td><?php echo $no++ ?></td>
 				<td><?php echo $r['idAdmin'] ?></td>
 				<td><?php echo $r['namaAdmin'] ?></td>
 				<td><?php echo $r['passwordAdmin'] ?></td>
 				<td><?php echo $r['emailAdmin'] ?></td>
+				<td><?php echo $r['jkAdmin'] ?></td>
 				<td><?php echo $r['alamatAdmin'] ?></td>
 				<td><?php echo $r['telpAdmin'] ?></td>
 			</tr>
