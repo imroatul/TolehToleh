@@ -110,7 +110,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('Superadmin/login','Superadmin/superadmin_model','barang','profil');
+$autoload['model'] = array('Superadmin/login','Superadmin/superadmin_model','barang','profil','modelku');
 
 
 /* End of file autoload.php */
