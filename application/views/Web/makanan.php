@@ -4,17 +4,16 @@
 	<div class="row">
 		<!--div class="span9"-->
 			<div class="well well-small">
-			<h4>Makanan <small class="pull-right">Lihat Semua Barang</small></h4>
+			<h4>Makanan <small class="pull-right"><a class="btn" href="#">Lihat Semua Barang</a></small></h4>
 
       <div class="row-fluid">
-			<div id="featured" class="carousel slide">
+			<div id="featured1" class="carousel slide">
 			<div class="carousel-inner">
 			  <div class="item active">
 			  <ul class="thumbnails">
 
         <li class="span3">
 				  <div class="thumbnail">
-				  <i class="tag"></i>
 					<a href="product_details.html"><img src="<?php echo base_url();?>includes/web/themes/images/products/m1.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>Suwar Suwir</h5>
@@ -25,7 +24,6 @@
 
         <li class="span3">
 				  <div class="thumbnail">
-				  <i class="tag"></i>
 					<a href="product_details.html"><img src="<?php echo base_url();?>includes/web/themes/images/products/m2.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>Dodol Garut</h5>
@@ -36,7 +34,6 @@
 
         <li class="span3">
 				  <div class="thumbnail">
-				  <i class="tag"></i>
 					<a href="product_details.html"><img src="<?php echo base_url();?>includes/web/themes/images/products/m3.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>Prol Tape</h5>
@@ -47,7 +44,6 @@
 
         <li class="span3">
 				  <div class="thumbnail">
-				  <i class="tag"></i>
 					<a href="product_details.html"><img src="<?php echo base_url();?>includes/web/themes/images/products/m4.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>Keripik Pisang</h5>
@@ -62,7 +58,6 @@
 			  <ul class="thumbnails">
 				<li class="span3">
 				  <div class="thumbnail">
-				  <i class="tag"></i>
 					<a href="product_details.html"><img src="<?php echo base_url();?>includes/web/themes/images/products/m5.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>Bagiak</h5>
@@ -73,7 +68,6 @@
 
 				<li class="span3">
 				  <div class="thumbnail">
-				  <i class="tag"></i>
 					<a href="product_details.html"><img src="<?php echo base_url();?>includes/web/themes/images/products/m6.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>Strudel Coklat</h5>
@@ -104,12 +98,13 @@
 			  </ul>
 			  </div>
 
-			  <a class="left carousel-control" href="#featured" data-slide="prev">‹</a>
-			  <a class="right carousel-control" href="#featured" data-slide="next">›</a>
+			  <a class="left carousel-control" href="#featured1" data-slide="prev">‹</a>
+			  <a class="right carousel-control" href="#featured1" data-slide="next">›</a>
 			  </div>
 			  </div>
 		</div>
 		</div>
 	</div>
+</div>
 </div>
 <!--Main end====================================================================== -->

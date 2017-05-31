@@ -6,7 +6,7 @@
 			<h4>Minuman <small class="pull-right">Lihat Semua Barang</small></h4>
 
       <div class="row-fluid">
-			<div id="featured" class="carousel slide">
+			<div id="featured2" class="carousel slide">
 			<div class="carousel-inner">
 			  <div class="item active">
 			  <ul class="thumbnails">
@@ -101,11 +101,12 @@
 			  </ul>
 			  </div>
 
-			  <a class="left carousel-control" href="#featured" data-slide="prev">‹</a>
-			  <a class="right carousel-control" href="#featured" data-slide="next">›</a>
+			  <a class="left carousel-control" href="#featured2" data-slide="prev">‹</a>
+			  <a class="right carousel-control" href="#featured2" data-slide="next">›</a>
 			  </div>
 			  </div>
 		</div>
   </div>
+</div>
 </div>
 </div>
