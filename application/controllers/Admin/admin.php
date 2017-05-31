@@ -133,6 +133,18 @@ class Admin extends CI_Controller {
         $data['results'] = $this->barang->search_barang($keyword);
         $this->load->view('Admin/Barang/cari_barang',$data);
     }
+	public function excel_barang_makanan(){
+ 
+        $data['title'] = 'Cetak Excel Makanan'; //judul title
+        $data['barang'] = $this->barang->tampil_data(); //query model semua barang
+        $this->load->view('print_barang', $data);
+    }
+	public function excel_barang_minuman(){
+ 
+        $data['title'] = 'Cetak Excel Minuman'; //judul title
+        $data['barang'] = $this->barang->tampil_data1(); //query model semua barang
+        $this->load->view('print_barang', $data);
+    }
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */
 }

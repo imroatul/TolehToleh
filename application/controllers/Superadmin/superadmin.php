@@ -18,15 +18,31 @@ class Superadmin extends CI_Controller {
     	$this->load->view('Superadmin/Main/footer');
 	}
 	/*--------------TAMBAH ADMIN--------------------*/
-	function data_superadmin()
-		{
-      $this->load->view('Superadmin/Main/header');
-      $this->load->view('Superadmin/Main/home');
+	function data_superadmin($idAdmin=NULL){
+			$jml = $this->db->get('admin');
+			
+			//pengaturan pagination
+			 $config['base_url'] = base_url().'Superadmin/superadmin/data_superadmin';
+			 $config['total_rows'] = $jml->num_rows();
+			 $config['per_page'] = '5';
+			 $config['first_page'] = 'Awal';
+			 $config['last_page'] = 'Akhir';
+			 $config['next_page'] = '&laquo;';
+			 $config['prev_page'] = '&raquo;';
+			
+			//inisialisasi config
+			 $this->pagination->initialize($config);
+			
+			//buat pagination
+			 $data['halaman'] = $this->pagination->create_links();
+			
+			//tamplikan data
 
-      $data['admin'] = $this->superadmin_model->tampil_data()->result();
-      $this->load->view('Superadmin/superadmin/data_superadmin',$data);
-
-	  $this->load->view('Superadmin/Main/footer');
+		  $this->load->view('Superadmin/Main/header');
+		  $this->load->view('Superadmin/Main/home');
+		  $data['admin'] = $this->superadmin_model->ambil_admin($config['per_page'], $idAdmin);
+		  $this->load->view('Superadmin/Superadmin/data_superadmin',$data);
+		  $this->load->view('Superadmin/Main/footer');
     }
 	
     function tambah_superadmin()
@@ -105,20 +121,24 @@ class Superadmin extends CI_Controller {
         $data['results'] = $this->superadmin_model->search_admin($keyword);
         $this->load->view('main/cari_superadmin',$data);
     }
-	
+	public function excel_admin(){
+ 
+        $data['title'] = 'Cetak Excel Barang'; //judul title
+        $data['admin'] = $this->superadmin_model->tampil_data(); //query model semua barang
+        $this->load->view('Superadmin/superadmin/print_admin', $data);
+    }
 	/*----------------BARANG-------------------------------------------------------------*/
 	function profil_superadmin(){
       $this->load->view('Superadmin/Main/header');
       $this->load->view('Superadmin/Main/home');
 
-//      $data['toko'] = $this->profil->tampil_toko()->result();
+//    $data['toko'] = $this->profil->tampil_toko()->result();
       $this->load->view('Superadmin/Profil/profil_toko');
 
       $this->load->view('Superadmin/Main/footer');
     }
 
-    function data_makanan()
-		{
+    function data_makanan(){
       $this->load->view('Superadmin/Main/header');
       $this->load->view('Superadmin/Main/home');
 
@@ -170,11 +190,11 @@ class Superadmin extends CI_Controller {
                 $this->barang->input_data($data); //akses model untuk menyimpan ke database
                 //pesan yang muncul jika berhasil diupload pada session flashdata
                 $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-success\" id=\"alert\">Upload gambar berhasil !!</div></div>");
-                redirect('http://localhost/TolahToleh/index.php/Superadmin/superadmin'); //jika berhasil maka akan ditampilkan view vupload
+                redirect('http://localhost/TolahToleh/index.php/Superadmin/superadmin/index'); //jika berhasil maka akan ditampilkan view vupload
             }else{
                 //pesan yang muncul jika terdapat error dimasukkan pada session flashdata
                 $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-danger\" id=\"alert\">Gagal upload gambar !!</div></div>");
-                redirect('http://localhost/TolahToleh/index.php/Superadmin/superadmin'); //jika gagal maka akan ditampilkan form upload
+                redirect('http://localhost/TolahToleh/index.php/Superadmin/superadmin/index'); //jika gagal maka akan ditampilkan form upload
             }
         }
     }
@@ -196,12 +216,14 @@ class Superadmin extends CI_Controller {
 	
 	function update_barang(){
 		$idBarang = $this->input->post('idBarang');
+		$deskripsi = $this->input->post('deskripsi');
 		$namaBarang = $this->input->post('namaBarang');
 		$kategoriBarang = $this->input->post('kategoriBarang');
 		$hargaBarang = $this->input->post('hargaBarang');
 		$stokBarang = $this->input->post('stokBarang');
 	 
 		$data = array(
+			'deskripsi' => $deskripsi,
 			'namaBarang' => $namaBarang,
 			'kategoriBarang' => $kategoriBarang,
 			'hargaBarang' => $hargaBarang,
@@ -221,6 +243,18 @@ class Superadmin extends CI_Controller {
         $keyword = $this->input->post('keyword');
         $data['results'] = $this->barang->search_barang($keyword);
         $this->load->view('Superadmin/Barang/cari_barang',$data);
+    }
+	public function excel_barang_makanan(){
+ 
+        $data['title'] = 'Cetak Excel Makanan'; //judul title
+        $data['barang'] = $this->barang->tampil_data(); //query model semua barang
+        $this->load->view('print_barang', $data);
+    }
+	public function excel_barang_minuman(){
+ 
+        $data['title'] = 'Cetak Excel Minuman'; //judul title
+        $data['barang'] = $this->barang->tampil_data1(); //query model semua barang
+        $this->load->view('print_barang', $data);
     }
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */

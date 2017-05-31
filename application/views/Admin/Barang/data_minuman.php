@@ -10,8 +10,7 @@
 	$start = ($page - 1) * $per_hal;
 ?>
 <div class="col-md-7">
-	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Admin/admin/pdf_barang" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  PDF</a>
-   	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Admin/admin/excel_barang" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
+   	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Admin/admin/excel_barang_minuman" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
 </div>
 <form action="http://localhost/TolahToleh/index.php/Admin/admin/cari_barang" method="get">
 	<div class="input-group col-md-5 col-md-offset-7">

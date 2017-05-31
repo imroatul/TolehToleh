@@ -10,7 +10,7 @@ class barang extends CI_Model{
 		return $data->result();
     }
 
-    function input_data($table,$data){
+    function input_data($data){
        $this->db->insert($this->tabel, $data);
        return TRUE;
     }

@@ -1,9 +1,8 @@
 	<?php
 class Superadmin_model extends CI_Model{
 	function tampil_data(){
-        return $this->db->get('admin');
+        return $this->db->get('admin')->result();
     }
-
     function input_data($table,$data){
         $this->db->insert($table,$data);
     }
@@ -23,5 +22,10 @@ class Superadmin_model extends CI_Model{
 		$data = $this->db->query("SELECT * from admin where namaAdmin like '%$cari%' ");
 		return $data->result();
     }
+	public function ambil_admin($num, $offset){
+		$this->db->order_by('idAdmin', 'ASC');
+		$data = $this->db->get('admin', $num, $offset);
+		return $data->result();
+	}
 }
 ?>

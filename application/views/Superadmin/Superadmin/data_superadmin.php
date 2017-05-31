@@ -2,7 +2,7 @@
 <button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-tosca"><span class="glyphicon glyphicon-plus"></span>&nbsp;Tambah Admin</button><br/>
 <br/>
 <?php
-	$per_hal=10;
+	$per_hal=5;
 	$jumlah_record=mysql_query("SELECT COUNT(*) from admin");
 	$jum=mysql_result($jumlah_record, 0);
 	$halaman=ceil($jum / $per_hal);
@@ -10,10 +10,9 @@
 	$start = ($page - 1) * $per_hal;
 ?>
 <div class="col-md-7">
-	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Superadmin/superadmin/pdf_admin" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  PDF</a>
-   	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Superadmin/superadmin/excel_admin" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
+   	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/Superadmin/superadmin/excel_admin" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
 </div>
-<form action="http://localhost/TolahToleh/index.php/Superadmin/superadmin/cari_barang" method="get">
+<form action="<?php echo site_url('Superadmin/superadmin/data_superadmin/'); ?>" method="get">
 	<div class="input-group col-md-5 col-md-offset-7">
 		<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search"></span></span>
 		<input type="text" class="form-control" placeholder="Cari Barang .." aria-describedby="basic-addon1" name="cari">
@@ -32,16 +31,16 @@
         <th class="col-md-0">Telepon</th>
 		<th class="col-md-0">Pilihan</th>
 	</tr>
-	<?php
-	if(isset($_GET['cari_admin'])){
-		$cari=mysql_real_escape_string($_GET['cari_admin']);
-		$brg=mysql_query("select * from admin where namaAdmin like '$cari'");
-	}else{
-		$brg=mysql_query("select * from admin limit $start, $per_hal");
-	}
-		$no = 1;
-		foreach($admin as $u){
-		?>
+<?php
+if(empty($query))
+ {
+ echo "<tr><td colspan=\"6\">Data tidak tersedia</td></tr>";
+ }else
+ {
+ $no = 1;
+ foreach($query as $row)
+ {
+ ?>
 		<tr>
 			<td><?php echo $no++ ?></td>
 			<td><?php echo $u->namaAdmin ?></td>
@@ -55,19 +54,15 @@
 			    <?php echo anchor('http://localhost/TolahToleh/index.php/Superadmin/superadmin/edit_superadmin/'.$u->idAdmin,'Edit'); ?>
                 <?php echo anchor('http://localhost/TolahToleh/index.php/Superadmin/superadmin/hapus_superadmin/'.$u->idAdmin,'Hapus'); ?>
 			</td>
+            
 		</tr>
-		<?php } ?>
-</table>
-<ul class="pagination">
-			<?php
-			for($x=1;$x<=$halaman;$x++){
-				?>
-				<li><a href="?page=<?php echo $x ?>"><?php echo $x ?></a></li>
-				<?php
-			}
-			?>
-</ul>
-<!-- modal input -->
+ <?php
+ $no++;
+ }}
+ ?>
+ </table>
+ <div class="halaman">Halaman : <?php echo $halaman;?></div>
+
 <div id="myModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
