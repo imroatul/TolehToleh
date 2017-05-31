@@ -1,5 +1,9 @@
 <div class="content-admin">
-<button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-tosca"><span class="glyphicon glyphicon-plus"></span>&nbsp;Tambah Barang</button><br/>
+<button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-tosca"><span class="glyphicon glyphicon-plus"></span>&nbsp;Tambah Barang</button>
+<div class="col-md-1">
+   	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Admin/admin/excel_barang_minuman" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
+</div>
+<br/>
 <br/>
 <?php
 	$per_hal=10;
@@ -9,15 +13,12 @@
 	$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
 	$start = ($page - 1) * $per_hal;
 ?>
-<div class="col-md-7">
-   	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Admin/admin/excel_barang_minuman" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
-</div>
-<form action="http://localhost/TolahToleh/index.php/Admin/admin/cari_barang" method="get">
+<!---<form action="http://localhost/TolahToleh/index.php/Admin/admin/cari_barang" method="get">
 	<div class="input-group col-md-5 col-md-offset-7">
 		<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search"></span></span>
 		<input type="text" class="form-control" placeholder="Cari Barang .." aria-describedby="basic-addon1" name="cari">
 	</div>
-</form>
+</form>--->
 <br/>
 <table class="table table-bordered">
 	<tr>

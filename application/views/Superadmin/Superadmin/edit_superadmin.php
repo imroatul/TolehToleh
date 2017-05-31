@@ -11,7 +11,7 @@
 <body>
 
 <div class="container">
-  <h3><span class="glyphicon glyphicon-briefcase"></span>  Edit Data Barang</h3>
+  <h3><span class="glyphicon glyphicon-briefcase"></span>  Edit Data Admin</h3>
   <a class="btn" href="<?php echo base_url(). 'index.php/Superadmin/superadmin/data_superadmin'; ?>"><span class="glyphicon glyphicon-arrow-left"></span>  Kembali</a>
   <?php foreach($admin as $u){ ?>
 	<form action="<?php echo base_url(). 'index.php/Superadmin/superadmin/update_superadmin'; ?>" method="post">
@@ -30,13 +30,7 @@
 			</tr>
 			<tr>
 				<td>Level</td>
-				<td>
-                <select name="level" required>
-                  <option value=""></option>
-                  <option value="Superadmin" <?php if($u->level == 'Superadmin'){ echo 'selected'; } ?>>Superadmin</option> 
-                  <option value="Admin" <?php if($u->level == 'Admin'){ echo 'selected'; }?>>Admin</option>
-                </select>
-                <br/></td>
+				<td><input type="text" class="form-control" name="level" value="<?php echo $u->level ?>" readonly></td>
 			</tr>
             <tr>
 				<td>E-mail</td>

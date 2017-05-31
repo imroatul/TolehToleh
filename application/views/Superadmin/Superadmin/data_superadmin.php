@@ -1,68 +1,57 @@
 <div class="content-admin">
-<button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-tosca"><span class="glyphicon glyphicon-plus"></span>&nbsp;Tambah Admin</button><br/>
+<button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-tosca"><span class="glyphicon glyphicon-plus"></span>&nbsp;Tambah Admin</button>
+<div class="col-md-1 mb">
+   	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Superadmin/superadmin/excel_admin" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
+</div>
 <br/>
 <?php
-	$per_hal=5;
-	$jumlah_record=mysql_query("SELECT COUNT(*) from admin");
+	$per_hal=10;
+	$jumlah_record=mysql_query("SELECT COUNT(*) from admin ");
 	$jum=mysql_result($jumlah_record, 0);
 	$halaman=ceil($jum / $per_hal);
 	$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
 	$start = ($page - 1) * $per_hal;
 ?>
-<div class="col-md-7">
-   	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/Superadmin/superadmin/excel_admin" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
-</div>
-<form action="<?php echo site_url('Superadmin/superadmin/data_superadmin/'); ?>" method="get">
+<!--<form action="<!-?php print base_url();?>Superadmin/superadmin/cari" method="post">
 	<div class="input-group col-md-5 col-md-offset-7">
 		<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search"></span></span>
-		<input type="text" class="form-control" placeholder="Cari Barang .." aria-describedby="basic-addon1" name="cari">
+		<input type="text" class="form-control" placeholder="Cari Admin .." aria-describedby="basic-addon1" name="cari">
 	</div>
-</form>
-<br/>
+</form>--->
+    <br/>
 <table class="table table-bordered">
-	<tr>
-		<th class="col-md-1">No</th>
-		<th class="col-md-0">Nama</th>
-		<th class="col-md-0">Password</th>
-		<th class="col-md-0">Level</th>
-		<th class="col-md-0">E-mail</th>
-        <th class="col-md-0">JK</th>
-        <th class="col-md-0">Alamat</th>
-        <th class="col-md-0">Telepon</th>
-		<th class="col-md-0">Pilihan</th>
-	</tr>
-<?php
-if(empty($query))
- {
- echo "<tr><td colspan=\"6\">Data tidak tersedia</td></tr>";
- }else
- {
- $no = 1;
- foreach($query as $row)
- {
- ?>
+		<tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Password</th>
+            <th>Level</th>
+            <th>Email</th>
+            <th>JK</th>
+            <th>Alamat</th>
+            <th>Telp</th>
+            <th>Pilihan</th>
+        </tr>		
+		<?php 
+		$no = 1;
+		foreach($user as $u){ 
+		?>
 		<tr>
 			<td><?php echo $no++ ?></td>
 			<td><?php echo $u->namaAdmin ?></td>
-			<td><?php echo $u->passwordAdmin ?></td>
-            <td><?php echo $u->level ?></td>
-            <td><?php echo $u->emailAdmin ?></td>
+            <td><?php echo $u->passwordAdmin ?></td>
+			<td><?php echo $u->level ?></td>
+			<td><?php echo $u->emailAdmin ?></td>
             <td><?php echo $u->jkAdmin ?></td>
             <td><?php echo $u->alamatAdmin ?></td>
             <td><?php echo $u->telpAdmin ?></td>
 			<td>
-			    <?php echo anchor('http://localhost/TolahToleh/index.php/Superadmin/superadmin/edit_superadmin/'.$u->idAdmin,'Edit'); ?>
-                <?php echo anchor('http://localhost/TolahToleh/index.php/Superadmin/superadmin/hapus_superadmin/'.$u->idAdmin,'Hapus'); ?>
+			    <?php echo anchor('http://localhost/TolahToleh/Superadmin/superadmin/edit_superadmin/'.$u->idAdmin,'Edit'); ?>
+                <?php echo anchor('http://localhost/TolahToleh/Superadmin/superadmin/hapus_superadmin/'.$u->idAdmin,'Hapus'); ?>
 			</td>
-            
 		</tr>
- <?php
- $no++;
- }}
- ?>
- </table>
- <div class="halaman">Halaman : <?php echo $halaman;?></div>
-
+		<?php } ?>
+	</table>
+<!-- modal input -->
 <div id="myModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">

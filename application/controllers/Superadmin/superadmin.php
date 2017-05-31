@@ -18,32 +18,14 @@ class Superadmin extends CI_Controller {
     	$this->load->view('Superadmin/Main/footer');
 	}
 	/*--------------TAMBAH ADMIN--------------------*/
-	function data_superadmin($idAdmin=NULL){
-			$jml = $this->db->get('admin');
-			
-			//pengaturan pagination
-			 $config['base_url'] = base_url().'Superadmin/superadmin/data_superadmin';
-			 $config['total_rows'] = $jml->num_rows();
-			 $config['per_page'] = '5';
-			 $config['first_page'] = 'Awal';
-			 $config['last_page'] = 'Akhir';
-			 $config['next_page'] = '&laquo;';
-			 $config['prev_page'] = '&raquo;';
-			
-			//inisialisasi config
-			 $this->pagination->initialize($config);
-			
-			//buat pagination
-			 $data['halaman'] = $this->pagination->create_links();
-			
-			//tamplikan data
+	function data_superadmin(){
+	  $this->load->view('Superadmin/Main/header');
+      $this->load->view('Superadmin/Main/home');
 
-		  $this->load->view('Superadmin/Main/header');
-		  $this->load->view('Superadmin/Main/home');
-		  $data['admin'] = $this->superadmin_model->ambil_admin($config['per_page'], $idAdmin);
-		  $this->load->view('Superadmin/Superadmin/data_superadmin',$data);
-		  $this->load->view('Superadmin/Main/footer');
-    }
+      $data['admin'] = $this->superadmin_model->tampil_data();
+      $this->load->view('Superadmin/superadmin/data_superadmin',$data);
+
+	  $this->load->view('Superadmin/Main/footer');    }
 	
     function tambah_superadmin()
 		{
@@ -114,13 +96,6 @@ class Superadmin extends CI_Controller {
 		$this->superadmin_model->update_data($where,$data,'admin');
 		redirect('http://localhost/TolahToleh/index.php/Superadmin/superadmin/data_superadmin');
 	}
-	
-	function cari_admin()
-    {
-        $keyword = $this->input->post('keyword');
-        $data['results'] = $this->superadmin_model->search_admin($keyword);
-        $this->load->view('main/cari_superadmin',$data);
-    }
 	public function excel_admin(){
  
         $data['title'] = 'Cetak Excel Barang'; //judul title
@@ -168,26 +143,26 @@ class Superadmin extends CI_Controller {
         $config['max_width']  = '1288'; //lebar maksimum 1288 px
         $config['max_height']  = '768'; //tinggi maksimu 768 px
         $config['file_name'] = $nmfile; //nama yang terupload nantinya
-
+ 
         $this->upload->initialize($config);
-        
+         
         if($_FILES['fotoBarang']['name'])
         {
             if ($this->upload->do_upload('fotoBarang'))
             {
                 $gbr = $this->upload->data();
                 $data = array(
-                  				'idBarang' => $this->input->post('idBarang'),
+                  'idBarang' => $this->input->post('idBarang'),
 								'fotoBarang' =>$gbr['file_name'],
 								'deskripsi' => $this->input->post('deskripsi'),
 								'namaBarang' => $this->input->post('namaBarang'),
 								'kategoriBarang' => $this->input->post('kategoriBarang'),
 								'hargaBarang' => $this->input->post('hargaBarang'),
 								'stokBarang' => $this->input->post('stokBarang')
-                  
+                   
                 );
-
-                $this->barang->input_data($data); //akses model untuk menyimpan ke database
+ 
+                $$this->barang->input_data($data); //akses model untuk menyimpan ke database
                 //pesan yang muncul jika berhasil diupload pada session flashdata
                 $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-success\" id=\"alert\">Upload gambar berhasil !!</div></div>");
                 redirect('http://localhost/TolahToleh/index.php/Superadmin/superadmin/index'); //jika berhasil maka akan ditampilkan view vupload
@@ -197,8 +172,7 @@ class Superadmin extends CI_Controller {
                 redirect('http://localhost/TolahToleh/index.php/Superadmin/superadmin/index'); //jika gagal maka akan ditampilkan form upload
             }
         }
-    }
-	
+    }	
     function hapus_barang($idBarang){
         $where = array('idBarang' => $idBarang);
         $this->barang->hapus_data('barang',$where);
