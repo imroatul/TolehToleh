@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootshop online Shopping cart</title>
+    <title>Tolah Toleh - Toko Oleh Oleh Online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -12,15 +12,6 @@
 <!-- Bootstrap style responsive -->
 	<link href="<?php echo base_url();?>includes/web/themes/css/bootstrap-responsive.min.css" rel="stylesheet"/>
 	<link href="<?php echo base_url();?>includes/web/themes/css/font-awesome.css" rel="stylesheet" type="text/css">
-<!-- Google-code-prettify -->
-	<link href="<?php echo base_url();?>includes/web/themes/js/google-code-prettify/prettify.css" rel="stylesheet"/>
-<!-- fav and touch icons -->
-    <link rel="shortcut icon" href="<?php echo base_url();?>includes/webthemes/images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url();?>includes/web/themes/images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url();?>includes/web/themes/images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url();?>includes/web/themes/images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="<?php echo base_url();?>includes/web/themes/images/ico/apple-touch-icon-57-precomposed.png">
-	<style type="text/css" id="enject"></style>
   </head>
 <body>
 <div id="header">
@@ -47,11 +38,39 @@
 			<option>Semua Kategori</option>
 			<option>Makanan</option>
 			<option>Minuman</option>
-			<option>Pakaian</option>
-			<option>Lain-lain</option>
 		</select>
 		  <button type="submit" id="submitButton" class="btn btn-primary">Cari</button>
     </form>
+
+    <ul id="topMenu" class="nav pull-right">
+	 <li class="">
+	 <a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Login</span></a>
+	<div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="false" >
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3>Login Block</h3>
+		  </div>
+		  <div class="modal-body">
+			<form class="form-horizontal loginFrm">
+			  <div class="control-group">
+				<input type="text" id="inputEmail" placeholder="Email">
+			  </div>
+			  <div class="control-group">
+				<input type="password" id="inputPassword" placeholder="Password">
+			  </div>
+			  <div class="control-group">
+				<label class="checkbox">
+				<input type="checkbox"> Remember me
+				</label>
+			  </div>
+			</form>
+			<button type="submit" class="btn btn-success">Sign in</button>
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		  </div>
+	</div>
+	</li>
+    </ul>
+
   </div>
 </div>
 </div>
@@ -65,7 +84,7 @@
 
 		  <div class="item active">
 		  <div class="container">
-        <img style="width:100%" src="<?php echo base_url();?>includes/web/themes/images/carousel/1.png" alt="special offers"/>
+        <img style="width:100%" src="<?php echo base_url();?>includes/web/themes/images/carousel/1.png" alt=""/>
 		  </div>
 		  </div>
 
@@ -77,13 +96,7 @@
 
 		  <div class="item">
         <div class="container">
-          <img src="<?php echo base_url();?>includes/web/themes/images/carousel/3.png" alt=""/>
-        </div>
-      </div>
-
-		  <div class="item">
-        <div class="container">
-          <img src="<?php echo base_url();?>includes/web/themes/images/carousel/4.png" alt=""/>
+          <img style="width:100%" src="<?php echo base_url();?>includes/web/themes/images/carousel/3.png" alt=""/>
         </div>
       </div>
 

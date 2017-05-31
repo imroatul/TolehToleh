@@ -5,7 +5,8 @@ class Web extends CI_Controller
 	public function index()
 	{
 		$this->load->view('Web/header');
-		$this->load->view('Web/home');
+		$this->load->view('Web/makanan');
+		$this->load->view('Web/minuman');
 		$this->load->view('Web/footer');
 	}
 }
