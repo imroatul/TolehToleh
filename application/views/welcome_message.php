@@ -96,7 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</table>
 	</div>
 
-	<p class="footer">In-Team<strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+	<p class="footer">Copyright @In_Team 2017 <strong></p>
 </div>
 
 </body>
