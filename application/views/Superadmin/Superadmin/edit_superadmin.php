@@ -14,7 +14,7 @@
   <h3><span class="glyphicon glyphicon-briefcase"></span>  Edit Data Barang</h3>
   <a class="btn" href="<?php echo base_url(). 'index.php/Superadmin/superadmin/data_superadmin'; ?>"><span class="glyphicon glyphicon-arrow-left"></span>  Kembali</a>
   <?php foreach($admin as $u){ ?>
-	<form action="<?php echo base_url(). 'index.php/Superadmin/superadmin/update'; ?>" method="post">
+	<form action="<?php echo base_url(). 'index.php/Superadmin/superadmin/update_superadmin'; ?>" method="post">
 		<table class="table">
 			<tr>
 				<td></td>

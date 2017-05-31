@@ -52,8 +52,8 @@
             <td><?php echo $u->alamatAdmin ?></td>
             <td><?php echo $u->telpAdmin ?></td>
 			<td>
-			    <?php echo anchor('http://localhost/TolahToleh/index.php/Superadmin/superadmin/edit/'.$u->idAdmin,'Edit'); ?>
-                <?php echo anchor('http://localhost/TolahToleh/index.php/Superadmin/superadmin/hapus/'.$u->idAdmin,'Hapus'); ?>
+			    <?php echo anchor('http://localhost/TolahToleh/index.php/Superadmin/superadmin/edit_superadmin/'.$u->idAdmin,'Edit'); ?>
+                <?php echo anchor('http://localhost/TolahToleh/index.php/Superadmin/superadmin/hapus_superadmin/'.$u->idAdmin,'Hapus'); ?>
 			</td>
 		</tr>
 		<?php } ?>

@@ -12,7 +12,7 @@
 
 <div class="container">
   <h3><span class="glyphicon glyphicon-briefcase"></span>  Edit Data Barang</h3>
-  <a class="btn" href="<?php echo base_url(). 'index.php/Admin/admin/data_barang'; ?>"><span class="glyphicon glyphicon-arrow-left"></span>  Kembali</a>
+  <a class="btn" href="<?php echo base_url(). 'index.php/Admin/admin/index'; ?>"><span class="glyphicon glyphicon-arrow-left"></span>  Kembali</a>
   <?php foreach($barang as $u){ ?>
 	<form action="<?php echo base_url(). 'index.php/Admin/admin/update'; ?>" method="post">
 		<table class="table">
@@ -49,7 +49,7 @@
 			<tr>
 				<td></td>
 				<td><input type="submit" class="btn btn-info" value="Simpan">
-               	<a class="btn btn-info" href="<?php echo base_url(). 'index.php/Admin/admin/data_barang'; ?>">Batal</a>
+               	<a class="btn btn-info" href="<?php echo base_url(). 'index.php/Admin/admin/index'; ?>">Batal</a>
 
                 </td>
 			</tr>

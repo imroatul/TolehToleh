@@ -12,9 +12,9 @@
 
 <div class="container">
   <h3><span class="glyphicon glyphicon-briefcase"></span>  Edit Data Barang</h3>
-  <a class="btn" href="<?php echo base_url(). 'index.php/Admin/admin/data_barang'; ?>"><span class="glyphicon glyphicon-arrow-left"></span>  Kembali</a>
+  <a class="btn" href="<?php echo base_url(). 'index.php/Superadmin/superadmin/index'; ?>"><span class="glyphicon glyphicon-arrow-left"></span>  Kembali</a>
   <?php foreach($barang as $u){ ?>
-	<form action="<?php echo base_url(). 'index.php/Admin/admin/update'; ?>" method="post">
+	<form action="<?php echo base_url(). 'index.php/Superadmin/superadmin/update_barang'; ?>" method="post">
 		<table class="table">
 			<tr>
 				<td></td>
@@ -23,6 +23,10 @@
             <tr>
 				<td>Foto</td>
 				<td><img src="images/galleryMelati/<?php echo $u->fotoBarang;?>"height="60px" width="60px" /><input type="file" class="form-control" name="fotoBarang"></td>
+			</tr>
+            <tr>
+				<td>Deskripsi</td>
+				<td><input type="text" class="form-control" name="deskripsi" value="<?php echo $u->deskripsi ?>"></td>
 			</tr>
 			<tr>
 				<td>Nama Barang</td>
@@ -49,7 +53,7 @@
 			<tr>
 				<td></td>
 				<td><input type="submit" class="btn btn-info" value="Simpan">
-               	<a class="btn btn-info" href="<?php echo base_url(). 'index.php/Admin/admin/data_barang'; ?>">Batal</a>
+               	<a class="btn btn-info" href="<?php echo base_url(). 'index.php/Superadmin/superadmin/'; ?>">Batal</a>
 
                 </td>
 			</tr>

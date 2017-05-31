@@ -13,7 +13,7 @@
 	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Admin/admin/pdf_barang" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  PDF</a>
    	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Admin/admin/excel_barang" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
 </div>
-<form action="http://localhost/TolahToleh/index.php/main/cari_barang" method="get">
+<form action="http://localhost/TolahToleh/index.php/Admin/admin/cari_barang" method="get">
 	<div class="input-group col-md-5 col-md-offset-7">
 		<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search"></span></span>
 		<input type="text" class="form-control" placeholder="Cari Barang .." aria-describedby="basic-addon1" name="cari">
@@ -49,7 +49,7 @@
             <td><?php echo $u->stokBarang ?></td>
 			<td>
 			    <?php echo anchor('http://localhost/TolahToleh/Admin/admin/edit/'.$u->idBarang,'Edit'); ?>
-                <?php echo anchor('http://localhost/TolahToleh/Admin/juragadminan/hapus/'.$u->idBarang,'Hapus'); ?>
+                <?php echo anchor('http://localhost/TolahToleh/Admin/admin/hapus/'.$u->idBarang,'Hapus'); ?>
 			</td>
 		</tr>
 		<?php } ?>
@@ -58,7 +58,7 @@
 			<?php
 			for($x=1;$x<=$halaman;$x++){
 				?>
-				<li><a href="?page=<?php echo $x ?>"><?php echo $x ?></a></li>
+				<li><a href=""><?php echo $x ?></a></li>
 				<?php
 			}
 			?>
@@ -86,7 +86,7 @@
 				//%03s untuk mengatur 3 karakter di belakang S
 				$IDbaru = $char . sprintf("%03s", $noUrut);
 				?>
-                <form role="form" action="http://localhost/TolahToleh/index.php/main/Admin/admin/tambah_aksi" method="post">
+                <form role="form" action="<?php echo base_url(). 'index.php/Admin/admin/tambah_aksi'; ?>" method="post">
                       <div class="form-group">
                       <input type="text" class="form-control" placeholder="Kode" name="idBarang" value="<?php echo $IDbaru; ?>" readonly= "readonly">
                       </div>

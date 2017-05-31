@@ -1,11 +1,18 @@
 	<?php
 class barang extends CI_Model{
 	function tampil_data(){
-        return $this->db->get('barang');
+        $data = $this->db->query("SELECT * from barang where kategoriBarang='Makanan' ");
+		return $data->result();
+    }
+	
+	function tampil_data1(){
+        $data = $this->db->query("SELECT * from barang where kategoriBarang='Minuman' ");
+		return $data->result();
     }
 
     function input_data($table,$data){
-        $this->db->insert($table,$data);
+       $this->db->insert($this->tabel, $data);
+       return TRUE;
     }
     function hapus_data($table,$where){
 	   	$this->db->where($where);

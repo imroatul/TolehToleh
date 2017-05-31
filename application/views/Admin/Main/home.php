@@ -17,12 +17,15 @@
                           <span>Profil Toko</span>
                       </a>
                   </li>
-
-                  <li class="sub-menu">
-                      <a href="<?php echo base_url();?>Admin/admin/data_barang" >
+				  <li class="sub-menu">
+                      <a href="javascript:;" >
                           <i class="fa fa-suitcase"></i>
-                          <span>Barang Juragan</span>
+                          <span>Data Barang</span>
                       </a>
+                      <ul class="sub">
+                          <li><a  href="<?php echo base_url();?>Admin/admin/data_makanan">Data Makanan</a></li>
+                          <li><a  href="<?php echo base_url();?>Admin/admin/data_minuman">Data Minuman</a></li>
+                      </ul>
                   </li>
               </ul>
               <!-- sidebar menu end-->

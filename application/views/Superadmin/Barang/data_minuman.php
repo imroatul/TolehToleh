@@ -3,17 +3,17 @@
 <br/>
 <?php
 	$per_hal=10;
-	$jumlah_record=mysql_query("SELECT COUNT(*) from barang");
+	$jumlah_record=mysql_query("SELECT COUNT(*) from barang where kategoriBarang='Minuman' ");
 	$jum=mysql_result($jumlah_record, 0);
 	$halaman=ceil($jum / $per_hal);
 	$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
 	$start = ($page - 1) * $per_hal;
 ?>
 <div class="col-md-7">
-	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Admin/admin/pdf_barang" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  PDF</a>
-   	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Admin/admin/excel_barang" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
+	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Superadmin/superadmin/pdf_barang" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  PDF</a>
+   	<a style="margin-bottom:10px" href="http://localhost/TolahToleh/index.php/Superadmin/superadmin/excel_barang" target="_blank" class="btn btn-default pull-right"><span class='glyphicon glyphicon-print'></span>  Excel</a>
 </div>
-<form action="http://localhost/TolahToleh/index.php/main/cari_barang" method="get">
+<form action="http://localhost/TolahToleh/index.php/Superadmin/superadmin/cari_barang" method="get">
 	<div class="input-group col-md-5 col-md-offset-7">
 		<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search"></span></span>
 		<input type="text" class="form-control" placeholder="Cari Barang .." aria-describedby="basic-addon1" name="cari">
@@ -23,7 +23,8 @@
 <table class="table table-bordered">
 	<tr>
 		<th class="col-md-1">No</th>
-    <th class="col-md-0">Foto</th>
+    	<th class="col-md-0">Foto</th>
+        <th class="col-md-0">Deskripsi</th>
 		<th class="col-md-0">Nama Barang</th>
 		<th class="col-md-0">Kategori</th>
 		<th class="col-md-0">Harga Barang</th>
@@ -43,13 +44,14 @@
 		<tr>
 			<td><?php echo $no++ ?></td>
 			<td><?php echo $u->fotoBarang ?></td>
+            <td><?php echo $u->deskripsi ?></td>
 			<td><?php echo $u->namaBarang ?></td>
 			<td><?php echo $u->kategoriBarang ?></td>
             <td>Rp.<?php echo $u->hargaBarang ?>,-</td>
             <td><?php echo $u->stokBarang ?></td>
 			<td>
-			    <?php echo anchor('http://localhost/TolahToleh/Admin/admin/edit/'.$u->idBarang,'Edit'); ?>
-                <?php echo anchor('http://localhost/TolahToleh/Admin/juragadminan/hapus/'.$u->idBarang,'Hapus'); ?>
+			    <?php echo anchor('http://localhost/TolahToleh/Superadmin/superadmin/edit_barang/'.$u->idBarang,'Edit'); ?>
+                <?php echo anchor('http://localhost/TolahToleh/Superadmin/superadmin/hapus_barang/'.$u->idBarang,'Hapus'); ?>
 			</td>
 		</tr>
 		<?php } ?>
@@ -58,7 +60,7 @@
 			<?php
 			for($x=1;$x<=$halaman;$x++){
 				?>
-				<li><a href="?page=<?php echo $x ?>"><?php echo $x ?></a></li>
+				<li><a href=""><?php echo $x ?></a></li>
 				<?php
 			}
 			?>
@@ -86,12 +88,15 @@
 				//%03s untuk mengatur 3 karakter di belakang S
 				$IDbaru = $char . sprintf("%03s", $noUrut);
 				?>
-                <form role="form" action="http://localhost/TolahToleh/index.php/main/Admin/admin/tambah_aksi" method="post">
+                <form role="form" action="<?php echo base_url(). 'index.php/Superadmin/superadmin/tambah_barang'; ?>" method="post">
                       <div class="form-group">
                       <input type="text" class="form-control" placeholder="Kode" name="idBarang" value="<?php echo $IDbaru; ?>" readonly= "readonly">
                       </div>
                       <div class="form-group">
                       <input type="file" name="fotoBarang" class="form-control" placeholder="Foto" required>
+                      </div>
+                       <div class="form-group">
+                      <input type="file" name="deskripsi" class="form-control" placeholder="Deskripsi" required>
                       </div>
                       <div class="form-group">
                       <input type="text" name="namaBarang" class="form-control" placeholder="Nama Barang" required>

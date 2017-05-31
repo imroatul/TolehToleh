@@ -42,6 +42,7 @@ class Main extends CI_Controller {
 		session_destroy();
 		redirect('main');
 	} 
+
 }
 
 /* End of file welcome.php */

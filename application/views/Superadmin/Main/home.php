@@ -12,7 +12,7 @@
               	  <h5 class="centered">Tolah Toleh</h5>
 
                   <li class="mt">
-                      <a href="<?php echo base_url();?>Superadmin/superadmin/profil_toko">
+                      <a href="<?php echo base_url();?>Superadmin/superadmin/profil_superadmin">
                           <i class="fa fa-user"></i>
                           <span>Profil Superadmin</span>
                       </a>
@@ -24,10 +24,14 @@
                       </a>
                   </li>
                   <li class="sub-menu">
-                      <a href="<?php echo base_url();?>Superadmin/superadmin/data_barang" >
+                      <a href="javascript:;" >
                           <i class="fa fa-suitcase"></i>
                           <span>Data Barang</span>
                       </a>
+                      <ul class="sub">
+                          <li><a  href="<?php echo base_url();?>Superadmin/superadmin/data_makanan">Data Makanan</a></li>
+                          <li><a  href="<?php echo base_url();?>Superadmin/superadmin/data_minuman">Data Minuman</a></li>
+                      </ul>
                   </li>
               </ul>
               <!-- sidebar menu end-->
