@@ -1,108 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Tolah Toleh - Toko Oleh Oleh Online</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<html>
+<head>
+<title>Tolah Toleh | Toko Oleh-Oleh Online</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Super Market Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="<?php echo base_url();?>includes/web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo base_url();?>includes/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- font-awesome icons -->
+<link href="<?php echo base_url();?>includes/web/css/font-awesome.css" rel="stylesheet">
+<!-- //font-awesome icons -->
+<!-- js -->
+<script src="<?php echo base_url();?>includes/web/js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<link href='//fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="<?php echo base_url();?>includes/web/js/move-top.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>includes/web/js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
 
-    <link id="callCss" rel="stylesheet" href="<?php echo base_url();?>includes/web/themes/bootshop/bootstrap.min.css" media="screen"/>
-    <link href="<?php echo base_url();?>includes/web/themes/css/base.css" rel="stylesheet" media="screen"/>
-<!-- Bootstrap style responsive -->
-	<link href="<?php echo base_url();?>includes/web/themes/css/bootstrap-responsive.min.css" rel="stylesheet"/>
-	<link href="<?php echo base_url();?>includes/web/themes/css/font-awesome.css" rel="stylesheet" type="text/css">
-  </head>
 <body>
-<div id="header">
-<div class="container">
-<div id="welcomeLine" class="row">
-	<div class="span6">Web ini masih menggunakan <strong>Versi 1</strong></div>
-	<div class="span6">
-	<div class="pull-right">Untuk pemesanan hubungi whatsapp 081234567890</div>
-	</div>
-</div>
+<!-- header -->
+	<div class="agileits_header">
+		<div class="container">
+			<div class="w3l_offers">
+				<p>DISKON SELAMA BULAN RAMADHAN HINGGA 50% . <a href="products.html">BELANJA SEKARANG</a></p>
+			</div>
+			<div class="agile-login">
+				<ul>
+					<li><a href="<?php echo base_url();?>web/register"> Buat Akun </a></li>
+					<li><a href="<?php echo base_url();?>web/login">Masuk</a></li>
 
-<!-- Navbar ================================================== -->
-<div id="logoArea" class="navbar">
-<a id="smallScreen" data-target="#topMenu" data-toggle="collapse" class="btn btn-navbar">
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-</a>
-  <div class="navbar-inner">
-    <a class="brand" href="index.html"><img src="<?php echo base_url();?>includes/web/themes/images/logo.png" alt="Bootsshop"/></a>
-		<form class="form-inline navbar-search" method="post" action="products.html" >
-		<input id="srchFld" class="srchTxt" type="text" />
-		  <select class="srchTxt">
-			<option>Semua Kategori</option>
-			<option>Makanan</option>
-			<option>Minuman</option>
-		</select>
-		  <button type="submit" id="submitButton" class="btn btn-primary">Cari</button>
-    </form>
-
-    <ul id="topMenu" class="nav pull-right">
-	 <li class="">
-	 <a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Login</span></a>
-	<div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="false" >
-		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3>Login Block</h3>
-		  </div>
-		  <div class="modal-body">
-			<form class="form-horizontal loginFrm">
-			  <div class="control-group">
-				<input type="text" id="inputEmail" placeholder="Email">
-			  </div>
-			  <div class="control-group">
-				<input type="password" id="inputPassword" placeholder="Password">
-			  </div>
-			  <div class="control-group">
-				<label class="checkbox">
-				<input type="checkbox"> Remember me
-				</label>
-			  </div>
-			</form>
-			<button type="submit" class="btn btn-success">Sign in</button>
-			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		  </div>
-	</div>
-	</li>
-    </ul>
-
-  </div>
-</div>
-</div>
-</div>
-<!-- Header End====================================================================== -->
-
-<!--Carousel head==================================================================== -->
-<div id="carouselBlk">
-	<div id="myCarousel" class="carousel slide">
-		<div class="carousel-inner">
-
-		  <div class="item active">
-		  <div class="container">
-        <img style="width:100%" src="<?php echo base_url();?>includes/web/themes/images/carousel/1.png" alt=""/>
-		  </div>
-		  </div>
-
-		  <div class="item">
-		  <div class="container">
-        <img style="width:100%" src="<?php echo base_url();?>includes/web/themes/images/carousel/2.png" alt=""/>
-		  </div>
-		  </div>
-
-		  <div class="item">
-        <div class="container">
-          <img style="width:100%" src="<?php echo base_url();?>includes/web/themes/images/carousel/3.png" alt=""/>
-        </div>
-      </div>
-
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
 		</div>
-		<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-		<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-	  </div>
-</div>
-<!--Carousel end===================================================================== -->
+	</div>
+
+	<div class="logo_products">
+		<div class="container">
+		<div class="w3ls_logo_products_left1">
+				<ul class="phone_email">
+					<li><i class="fa fa-phone" aria-hidden="true"></i>Untuk pemesanan online WA : 0812234567890</li>
+
+				</ul>
+			</div>
+			<div class="w3ls_logo_products_left">
+				<h1><a href="index.html">tolah toleh</a></h1>
+			</div>
+		<div class="w3l_search">
+			<form action="#" method="post">
+				<input type="search" name="Search" placeholder="Cari produk..." required="">
+				<button type="submit" class="btn btn-default search" aria-label="Left Align">
+					<i class="fa fa-search" aria-hidden="true"> </i>
+				</button>
+				<div class="clearfix"></div>
+			</form>
+		</div>
+
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!-- //header -->
