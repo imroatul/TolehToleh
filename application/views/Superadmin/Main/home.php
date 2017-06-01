@@ -26,6 +26,12 @@
                           <li><a  href="<?php echo base_url();?>Superadmin/superadmin/data_minuman">Data Minuman</a></li>
                       </ul>
                   </li>
+                  <li class="sub-menu">
+                      <a href="<?php echo base_url();?>Superadmin/superadmin/data_member" >
+                          <i class="fa fa-suitcase"></i>
+                          <span>Data Member</span>
+                      </a>
+                  </li>
               </ul>
               <!-- sidebar menu end-->
           </div>

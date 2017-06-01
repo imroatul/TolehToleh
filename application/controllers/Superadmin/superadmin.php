@@ -214,6 +214,7 @@ class Superadmin extends CI_Controller {
         $data['barang'] = $this->barang->tampil_data1(); //query model semua barang
         $this->load->view('print_barang', $data);
     }
+	
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */
 }
