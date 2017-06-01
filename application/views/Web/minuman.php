@@ -7,16 +7,9 @@
             <figure>
               <div class="snipcart-item block" >
                 <div class="snipcart-thumb">
-                  <a href="products.html"><img title=" " alt=" " src="<?php echo base_url();?>includes/web/images/7.png" /></a>
-                  <p>Sona-masoori-rice</p>
-                  <div class="stars">
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star gray-star" aria-hidden="true"></i>
-                  </div>
-                  <h4>$35.99 <span>$55.00</span></h4>
+                  <a href="#"><img title=" " alt=" " src="<?php echo base_url();?>includes/web/images/a2.jpg" /></a>
+                  <p>Kopi Robusta</p>
+                  <h4>Rp50000<span>65000</span></h4>
                 </div>
                 <div class="snipcart-details top_brand_home_details">
                   <form action="#" method="post">
@@ -24,10 +17,10 @@
                       <input type="hidden" name="cmd" value="_cart" />
                       <input type="hidden" name="add" value="1" />
                       <input type="hidden" name="business" value=" " />
-                      <input type="hidden" name="item_name" value="Fortune Sunflower Oil" />
-                      <input type="hidden" name="amount" value="35.99" />
-                      <input type="hidden" name="discount_amount" value="1.00" />
-                      <input type="hidden" name="currency_code" value="USD" />
+                      <input type="hidden" name="item_name" value="Kopi Robusta" />
+                      <input type="hidden" name="amount" value="65000" />
+                      <input type="hidden" name="discount_amount" value="15000" />
+                      <input type="hidden" name="currency_code" value="IDR" />
                       <input type="hidden" name="return" value=" " />
                       <input type="hidden" name="cancel_return" value=" " />
                       <input type="submit" name="submit" value="Add to cart" class="button" />
@@ -50,16 +43,9 @@
             <figure>
               <div class="snipcart-item block" >
                 <div class="snipcart-thumb">
-                  <a href="products.html"><img title=" " alt=" " src="<?php echo base_url();?>includes/web/images/8.png" /></a>
-                  <p>Milky-mist-paneer</p>
-                  <div class="stars">
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star gray-star" aria-hidden="true"></i>
-                  </div>
-                  <h4>$30.99 <span>$45.00</span></h4>
+                  <a href="#"><img title=" " alt=" " src="<?php echo base_url();?>includes/web/images/a1.png" /></a>
+                  <p>Wedang Jahe</p>
+                  <h4>Rp40000 </h4>
                 </div>
                 <div class="snipcart-details top_brand_home_details">
                   <form action="#" method="post">
@@ -67,10 +53,10 @@
                       <input type="hidden" name="cmd" value="_cart" />
                       <input type="hidden" name="add" value="1" />
                       <input type="hidden" name="business" value=" " />
-                      <input type="hidden" name="item_name" value="basmati rise" />
-                      <input type="hidden" name="amount" value="30.99" />
-                      <input type="hidden" name="discount_amount" value="1.00" />
-                      <input type="hidden" name="currency_code" value="USD" />
+                      <input type="hidden" name="item_name" value="Wedang Jahe" />
+                      <input type="hidden" name="amount" value="40000" />
+                      <input type="hidden" name="discount_amount" value="" />
+                      <input type="hidden" name="currency_code" value="IDR" />
                       <input type="hidden" name="return" value=" " />
                       <input type="hidden" name="cancel_return" value=" " />
                       <input type="submit" name="submit" value="Add to cart" class="button" />
@@ -96,16 +82,9 @@
             <figure>
               <div class="snipcart-item block">
                 <div class="snipcart-thumb">
-                  <a href="products.html"><img src="<?php echo base_url();?>includes/web/images/9.png" alt=" " class="img-responsive" /></a>
-                  <p>Basmati-Rice</p>
-                  <div class="stars">
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star gray-star" aria-hidden="true"></i>
-                  </div>
-                  <h4>$80.99 <span>$105.00</span></h4>
+                  <a href="#"><img src="<?php echo base_url();?>includes/web/images/a3.png" alt=" " class="img-responsive" /></a>
+                  <p>Serbuk Kedelai</p>
+                  <h4>Rp50000 <span>65000</span></h4>
                 </div>
                 <div class="snipcart-details top_brand_home_details">
                   <form action="#" method="post">
@@ -113,10 +92,10 @@
                       <input type="hidden" name="cmd" value="_cart" />
                       <input type="hidden" name="add" value="1" />
                       <input type="hidden" name="business" value=" " />
-                      <input type="hidden" name="item_name" value="Pepsi soft drink" />
-                      <input type="hidden" name="amount" value="80.00" />
-                      <input type="hidden" name="discount_amount" value="1.00" />
-                      <input type="hidden" name="currency_code" value="USD" />
+                      <input type="hidden" name="item_name" value="Serbuk Kedelai" />
+                      <input type="hidden" name="amount" value="65000" />
+                      <input type="hidden" name="discount_amount" value="15000" />
+                      <input type="hidden" name="currency_code" value="IDR" />
                       <input type="hidden" name="return" value=" " />
                       <input type="hidden" name="cancel_return" value=" " />
                       <input type="submit" name="submit" value="Add to cart" class="button" />
@@ -142,16 +121,9 @@
             <figure>
               <div class="snipcart-item block" >
                 <div class="snipcart-thumb">
-                  <a href="products.html"><img title=" " alt=" " src="<?php echo base_url();?>includes/web/images/10.png" /></a>
-                  <p>Fortune-sunflower</p>
-                  <div class="stars">
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star gray-star" aria-hidden="true"></i>
-                  </div>
-                  <h4>$20.99 <span>$35.00</span></h4>
+                  <a href="#"><img title=" " alt=" " src="<?php echo base_url();?>includes/web/images/a4.png" /></a>
+                  <p>Edamame</p>
+                  <h4>Rp18000 </h4>
                 </div>
                 <div class="snipcart-details top_brand_home_details">
                   <form action="#" method="post">
@@ -159,10 +131,10 @@
                       <input type="hidden" name="cmd" value="_cart" />
                       <input type="hidden" name="add" value="1" />
                       <input type="hidden" name="business" value=" " />
-                      <input type="hidden" name="item_name" value="Fortune Sunflower Oil" />
-                      <input type="hidden" name="amount" value="20.99" />
-                      <input type="hidden" name="discount_amount" value="1.00" />
-                      <input type="hidden" name="currency_code" value="USD" />
+                      <input type="hidden" name="item_name" value="Edamame" />
+                      <input type="hidden" name="amount" value="18000" />
+                      <input type="hidden" name="discount_amount" value="" />
+                      <input type="hidden" name="currency_code" value="IDR" />
                       <input type="hidden" name="return" value=" " />
                       <input type="hidden" name="cancel_return" value=" " />
                       <input type="submit" name="submit" value="Add to cart" class="button" />
@@ -185,16 +157,9 @@
             <figure>
               <div class="snipcart-item block" >
                 <div class="snipcart-thumb">
-                  <a href="products.html"><img title=" " alt=" " src="<?php echo base_url();?>includes/web/images/12.png" /></a>
-                  <p>Nestle-a-slim</p>
-                  <div class="stars">
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star gray-star" aria-hidden="true"></i>
-                  </div>
-                  <h4>$20.99 <span>$35.00</span></h4>
+                  <a href="#"><img title=" " alt=" " src="<?php echo base_url();?>includes/web/images/a5.jpg" /></a>
+                  <p>Kopi Robusta</p>
+                  <h4>Rp55000</h4>
                 </div>
                 <div class="snipcart-details top_brand_home_details">
                   <form action="#" method="post">
@@ -202,10 +167,10 @@
                       <input type="hidden" name="cmd" value="_cart" />
                       <input type="hidden" name="add" value="1" />
                       <input type="hidden" name="business" value=" " />
-                      <input type="hidden" name="item_name" value="basmati rise" />
-                      <input type="hidden" name="amount" value="20.99" />
-                      <input type="hidden" name="discount_amount" value="1.00" />
-                      <input type="hidden" name="currency_code" value="USD" />
+                      <input type="hidden" name="item_name" value="Kopi Robusta" />
+                      <input type="hidden" name="amount" value="55000" />
+                      <input type="hidden" name="discount_amount" value="" />
+                      <input type="hidden" name="currency_code" value="IDR" />
                       <input type="hidden" name="return" value=" " />
                       <input type="hidden" name="cancel_return" value=" " />
                       <input type="submit" name="submit" value="Add to cart" class="button" />
@@ -228,16 +193,9 @@
             <figure>
               <div class="snipcart-item block">
                 <div class="snipcart-thumb">
-                  <a href="products.html"><img src="<?php echo base_url();?>includes/web/images/13.png" alt=" " class="img-responsive" /></a>
-                  <p>Bread-sandwich</p>
-
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                    <i class="fa fa-star gray-star" aria-hidden="true"></i>
-                  </div>
-                  <h4>$40.99 <span>$65.00</span></h4>
+                  <a href="#"><img src="<?php echo base_url();?>includes/web/images/a6.jpg" alt=" " class="img-responsive" /></a>
+                  <p>Teh Tarik</p>
+                  <h4>Rp57000 <span>72000</span></h4>
                 </div>
                 <div class="snipcart-details top_brand_home_details">
                   <form action="#" method="post">
@@ -245,10 +203,10 @@
                       <input type="hidden" name="cmd" value="_cart" />
                       <input type="hidden" name="add" value="1" />
                       <input type="hidden" name="business" value=" " />
-                      <input type="hidden" name="item_name" value="Pepsi soft drink" />
-                      <input type="hidden" name="amount" value="40.00" />
-                      <input type="hidden" name="discount_amount" value="1.00" />
-                      <input type="hidden" name="currency_code" value="USD" />
+                      <input type="hidden" name="item_name" value="Teh Tarik" />
+                      <input type="hidden" name="amount" value="72000" />
+                      <input type="hidden" name="discount_amount" value="15000" />
+                      <input type="hidden" name="currency_code" value="IDR" />
                       <input type="hidden" name="return" value=" " />
                       <input type="hidden" name="cancel_return" value=" " />
                       <input type="submit" name="submit" value="Add to cart" class="button" />

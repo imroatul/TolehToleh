@@ -41,13 +41,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="w3l_offers">
 				<p>DISKON SELAMA BULAN RAMADHAN HINGGA 50% . <a href="products.html">BELANJA SEKARANG</a></p>
 			</div>
-			<div class="agile-login">
+			<!--div class="agile-login">
 				<ul>
 					<li><a href="<?php echo base_url();?>web/register"> Buat Akun </a></li>
 					<li><a href="<?php echo base_url();?>web/login">Masuk</a></li>
 
 				</ul>
-			</div>
+			</div-->
 			<div class="clearfix"> </div>
 		</div>
 	</div>
@@ -61,9 +61,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</ul>
 			</div>
 			<div class="w3ls_logo_products_left">
-				<h1><a href="index.html">tolah toleh</a></h1>
+				<h1><a href="index.html">toko oleh oleh online</a></h1>
 			</div>
-		<div class="w3l_search">
+		<!--div class="w3l_search">
 			<form action="#" method="post">
 				<input type="search" name="Search" placeholder="Cari produk..." required="">
 				<button type="submit" class="btn btn-default search" aria-label="Left Align">
@@ -71,7 +71,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</button>
 				<div class="clearfix"></div>
 			</form>
-		</div>
+		</div-->
 
 			<div class="clearfix"> </div>
 		</div>
