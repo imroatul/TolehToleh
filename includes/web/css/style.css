@@ -44,6 +44,9 @@ span.glyphicon.glyphicon-shopping-cart.my-cart-icon.my-cart-icon-affix {
     display: block;
     text-align: center;
 }
+.snipcart-thumb img {
+  max-height: 150px;
+}
 .my-cart-icon-affix i {
     background: #00bfa4 !important;
 }
@@ -186,7 +189,7 @@ button.w3view-cart:focus{
 .w3ls_logo_products_left {
     float: left;
     text-align: center;
-    width: 33.33%;
+    width: 50%;
 }
 .w3ls_logo_products_left h1 a{
 	font-size: 40px;
