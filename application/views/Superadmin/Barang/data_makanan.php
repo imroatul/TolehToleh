@@ -7,24 +7,23 @@
 <br/>
 <?php
 	$per_hal=10;
-	$jumlah_record=mysql_query("SELECT COUNT(*) from barang where kategoriBarang='Makanan' ");
+	$jumlah_record=mysql_query("SELECT COUNT(*) from barang");
 	$jum=mysql_result($jumlah_record, 0);
 	$halaman=ceil($jum / $per_hal);
 	$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
 	$start = ($page - 1) * $per_hal;
 ?>
-<!--<form action="http://localhost/TolahToleh/index.php/Superadmin/superadmin/cari_barang" method="get">
+<!----<form action="http://localhost/TolahToleh/index.php/Admin/admin/cari_barang" method="get">
 	<div class="input-group col-md-5 col-md-offset-7">
 		<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-search"></span></span>
 		<input type="text" class="form-control" placeholder="Cari Barang .." aria-describedby="basic-addon1" name="cari">
 	</div>
-</form>-->
+</form>--->
 <br/>
 <table class="table table-bordered">
 	<tr>
-		<th class="col-md-1">No</th>
-    	<th class="col-md-0">Foto</th>
-        <th class="col-md-0">Deskripsi</th>
+		<th class="col-md-0">No</th>
+        <th class="col-md-1">Deskripsi</th>
 		<th class="col-md-0">Nama Barang</th>
 		<th class="col-md-0">Kategori</th>
 		<th class="col-md-0">Harga Barang</th>
@@ -43,9 +42,8 @@
 		?>
 		<tr>
 			<td><?php echo $no++ ?></td>
-			<td><img src="includes/img/Barang/<?php echo $u->fotoBarang ?>"/></td>
-            <td><?php echo $u->deskripsi ?></td>
-			<td><?php echo $u->namaBarang ?></td>
+            <td><?php echo $u->deskripsi ?></td>			
+            <td><?php echo $u->namaBarang ?></td>
 			<td><?php echo $u->kategoriBarang ?></td>
             <td>Rp.<?php echo $u->hargaBarang ?>,-</td>
             <td><?php echo $u->stokBarang ?></td>
@@ -88,7 +86,6 @@
 				//%03s untuk mengatur 3 karakter di belakang S
 				$IDbaru = $char . sprintf("%03s", $noUrut);
 				?>
-                <?=$this->session->flashdata('pesan')?>
                 <form role="form" action="<?php echo base_url(). 'index.php/Superadmin/superadmin/tambah_barang'; ?>" method="post">
                       <div class="form-group">
                       <input type="text" class="form-control" placeholder="Kode" name="idBarang" value="<?php echo $IDbaru; ?>" readonly= "readonly">
@@ -118,7 +115,7 @@
                       </div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-					<input type="submit" class="btn btn-primary" value="Simpan">
+					<input type="submit" class="btn btn-primary" value="Simpan" name="submit">
 				</div>
 			</form>
 		</div>

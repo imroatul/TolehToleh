@@ -10,13 +10,6 @@
 
               	  <p class="centered"><a href="profile.html"><img src="<?php echo base_url();?>includes/img/logo.png" class="img-circle" width="60"></a></p>
               	  <h5 class="centered">Tolah Toleh</h5>
-
-                  <li class="mt">
-                      <a href="<?php echo base_url();?>Admin/admin/profil_toko">
-                          <i class="fa fa-user"></i>
-                          <span>Profil Toko</span>
-                      </a>
-                  </li>
 				  <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-suitcase"></i>

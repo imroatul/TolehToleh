@@ -22,8 +22,8 @@
 <br/>
 <table class="table table-bordered">
 	<tr>
-		<th class="col-md-1">No</th>
-    <th class="col-md-0">Foto</th>
+		<th class="col-md-0">No</th>
+    	<th class="col-md-1">Deskripsi</th>
 		<th class="col-md-0">Nama Barang</th>
 		<th class="col-md-0">Kategori</th>
 		<th class="col-md-0">Harga Barang</th>
@@ -42,8 +42,8 @@
 		?>
 		<tr>
 			<td><?php echo $no++ ?></td>
-			<td><?php echo $u->fotoBarang ?></td>
-			<td><?php echo $u->namaBarang ?></td>
+            <td><?php echo $u->deskripsi ?></td>			
+            <td><?php echo $u->namaBarang ?></td>
 			<td><?php echo $u->kategoriBarang ?></td>
             <td>Rp.<?php echo $u->hargaBarang ?>,-</td>
             <td><?php echo $u->stokBarang ?></td>
@@ -94,6 +94,9 @@
                       <input type="file" name="fotoBarang" class="form-control" placeholder="Foto" required>
                       </div>
                       <div class="form-group">
+                      <input type="text" name="deskripsi" class="form-control" placeholder="Deskripsi" required>
+                      </div>
+                      <div class="form-group">
                       <input type="text" name="namaBarang" class="form-control" placeholder="Nama Barang" required>
                       </div>
                       <div class="form-group">
@@ -112,7 +115,7 @@
                       </div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-					<input type="submit" class="btn btn-primary" value="Simpan">
+					<input type="submit" class="btn btn-primary" value="Simpan" name="submit">
 				</div>
 			</form>
 		</div>

@@ -72,7 +72,7 @@ class Admin extends CI_Controller {
 				'stokBarang' => $stokBarang
 			);
 			$this->barang->input_data('barang',$data);
-			redirect('http://localhost/TolahToleh/index.php/Superadmin/superadmin/index');	
+			redirect('http://localhost/TolahToleh/index.php/Admin/admin/index');	
 		
 	}
     function hapus($idBarang){

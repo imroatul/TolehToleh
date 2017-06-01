@@ -22,8 +22,8 @@
 <br/>
 <table class="table table-bordered">
 	<tr>
-		<th class="col-md-1">No</th>
-    <th class="col-md-0">Foto</th>
+		<th class="col-md-0">No</th>
+    	<th class="col-md-1">Deskripsi</th>
 		<th class="col-md-0">Nama Barang</th>
 		<th class="col-md-0">Kategori</th>
 		<th class="col-md-0">Harga Barang</th>
@@ -42,7 +42,6 @@
 		?>
 		<tr>
 			<td><?php echo $no++ ?></td>
-			<td><?php echo $u->fotoBarang ?></td>
 			<td><?php echo $u->namaBarang ?></td>
 			<td><?php echo $u->kategoriBarang ?></td>
             <td>Rp.<?php echo $u->hargaBarang ?>,-</td>
