@@ -111,7 +111,7 @@
                       <input type="text" name="hargaBarang" class="form-control" placeholder="Harga" required>
                       </div>
                       <div class="form-group">
-                      <input type="text" name="stokbarang" class="form-control" placeholder="Stok" required>
+                      <input type="text" name="stokBarang" class="form-control" placeholder="Stok" required>
                       </div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>

@@ -32,10 +32,10 @@
 				<td>Kategori Barang</td>
 				<td>
                 <select name="kategoriBarang" required>
-      <option value=""></option>
-      <option value="Makanan" <?php if($u->kategoriBarang == 'Makanan'){ echo 'selected'; } ?>>Makanan</option> 
-      <option value="Minuman" <?php if($u->kategoriBarang == 'Minuman'){ echo 'selected'; }?>>Minuman</option>
-     </select>
+                  <option value=""></option>
+                  <option value="Makanan" <?php if($u->kategoriBarang == 'Makanan'){ echo 'selected'; } ?>>Makanan</option> 
+                  <option value="Minuman" <?php if($u->kategoriBarang == 'Minuman'){ echo 'selected'; }?>>Minuman</option>
+                </select>
                 <br/></td>
 			</tr>
             <tr>

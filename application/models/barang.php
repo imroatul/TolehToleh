@@ -10,9 +10,8 @@ class barang extends CI_Model{
 		return $data->result();
     }
 
-    function input_data($data){
-       $this->db->insert($this->tabel, $data);
-       return TRUE;
+    function input_data($table,$data){
+        $this->db->insert($table,$data);
     }
     function hapus_data($table,$where){
 	   	$this->db->where($where);
