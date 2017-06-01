@@ -56,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 		<div class="w3ls_logo_products_left1">
 				<ul class="phone_email">
-					<li><i class="fa fa-phone" aria-hidden="true"></i>Untuk pemesanan online WA : 0812234567890</li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i>Untuk pemesanan online WA : 081234567890</li>
 
 				</ul>
 			</div>
