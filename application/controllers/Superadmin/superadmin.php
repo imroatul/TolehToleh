@@ -135,44 +135,26 @@ class Superadmin extends CI_Controller {
     }
 	
     function tambah_barang(){
-		$this->load->library('upload');
-        $nmfile = "file_".time(); //nama file saya beri nama langsung dan diikuti fungsi time
-        $config['upload_path'] = './includes/img/Barang/'; //path folder
-        $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
-        $config['max_size'] = '2048'; //maksimum besar file 2M
-        $config['max_width']  = '1288'; //lebar maksimum 1288 px
-        $config['max_height']  = '768'; //tinggi maksimu 768 px
-        $config['file_name'] = $nmfile; //nama yang terupload nantinya
- 
-        $this->upload->initialize($config);
-         
-        if($_FILES['fotoBarang']['name'])
-        {
-            if ($this->upload->do_upload('fotoBarang'))
-            {
-                $gbr = $this->upload->data();
-                $data = array(
-                  'idBarang' => $this->input->post('idBarang'),
-								'fotoBarang' =>$gbr['file_name'],
-								'deskripsi' => $this->input->post('deskripsi'),
-								'namaBarang' => $this->input->post('namaBarang'),
-								'kategoriBarang' => $this->input->post('kategoriBarang'),
-								'hargaBarang' => $this->input->post('hargaBarang'),
-								'stokBarang' => $this->input->post('stokBarang')
-                   
-                );
- 
-                $$this->barang->input_data($data); //akses model untuk menyimpan ke database
-                //pesan yang muncul jika berhasil diupload pada session flashdata
-                $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-success\" id=\"alert\">Upload gambar berhasil !!</div></div>");
-                redirect('http://localhost/TolahToleh/index.php/Superadmin/superadmin/index'); //jika berhasil maka akan ditampilkan view vupload
-            }else{
-                //pesan yang muncul jika terdapat error dimasukkan pada session flashdata
-                $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-danger\" id=\"alert\">Gagal upload gambar !!</div></div>");
-                redirect('http://localhost/TolahToleh/index.php/Superadmin/superadmin/index'); //jika gagal maka akan ditampilkan form upload
-            }
-        }
-    }	
+		$idBarang = $this->input->post('idBarang');
+		$fotoBarang = $this->input->post('fotoBarang');
+		$deskripsi = $this->input->post('deskripsi');
+		$namaBarang = $this->input->post('namaBarang');
+    	$kategoriBarang = $this->input->post('kategoriBarang');
+    	$hargaBarang = $this->input->post('hargaBarang');
+		$stokBarang = $this->input->post('stokBarang');
+
+			$data = array(
+				'idBarang' => $idBarang,
+     			'fotoBarang' => $fotoBarang,
+				'deskripsi' => $deskripsi,
+      			'namaBarang' => $namaBarang,
+      			'kategoriBarang' => $kategoriBarang,
+				'hargaBarang' => $hargaBarang,
+				'stokBarang' => $stokBarang
+			);
+			$this->barang->input_data('barang',$data);
+			redirect('http://localhost/TolahToleh/index.php/Superadmin/superadmin/index');
+	}
     function hapus_barang($idBarang){
         $where = array('idBarang' => $idBarang);
         $this->barang->hapus_data('barang',$where);
@@ -190,6 +172,7 @@ class Superadmin extends CI_Controller {
 	
 	function update_barang(){
 		$idBarang = $this->input->post('idBarang');
+		$fotoBarang = $this->input->post('fotoBarang');
 		$deskripsi = $this->input->post('deskripsi');
 		$namaBarang = $this->input->post('namaBarang');
 		$kategoriBarang = $this->input->post('kategoriBarang');
@@ -197,6 +180,7 @@ class Superadmin extends CI_Controller {
 		$stokBarang = $this->input->post('stokBarang');
 	 
 		$data = array(
+			'fotoBarang' => $fotoBarang,
 			'deskripsi' => $deskripsi,
 			'namaBarang' => $namaBarang,
 			'kategoriBarang' => $kategoriBarang,

@@ -22,7 +22,7 @@
 			</tr>
             <tr>
 				<td>Foto</td>
-				<td><img src="images/galleryMelati/<?php echo $u->fotoBarang;?>"height="60px" width="60px" /><input type="file" class="form-control" name="fotoBarang"></td>
+				<td><img src="includes/img/Barang/<?php echo $u->fotoBarang;?>"height="60px" width="60px" /><input type="file" class="form-control" name="fotoBarang"></td>
 			</tr>
 			<tr>
 				<td>Nama Barang</td>

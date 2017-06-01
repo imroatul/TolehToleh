@@ -33,7 +33,7 @@
         </tr>		
 		<?php 
 		$no = 1;
-		foreach($user as $u){ 
+		foreach($admin as $u){ 
 		?>
 		<tr>
 			<td><?php echo $no++ ?></td>
